@@ -9,6 +9,9 @@ class WebPageDataScrappers:
     def getTagContent(self, tag_name):
         return self.html_soup_content.find_all(tag_name)
     
+    def getHtml(self):
+        return str(self.html_soup_content)
+
     def handleContent(self, tag_name, attrs):
         contents = []
         for tagContent in self.getTagContent(tag_name):

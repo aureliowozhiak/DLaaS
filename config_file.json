@@ -1,0 +1,24 @@
+{
+    "https://pt.wikipedia.org/wiki/Python":[
+        {
+            "tag": "a",
+            "attrs": ["href", "get_text"],
+            "file_name": "links_wiki_python.csv",
+            "sep": ";"
+         },
+         {
+            "tag": "a",
+            "attrs": ["href"],
+            "file_name": "urls_wiki_python.csv",
+            "sep": ","
+         }
+    ],
+    "https://dataengineer.help/knowledge/":[
+        {
+            "tag": "a",
+            "attrs": ["href", "get_text"],
+            "file_name": "links_dataengineerhelp.csv",
+            "sep": ";"
+         }
+    ]
+}
