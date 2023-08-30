@@ -1,4 +1,5 @@
 from methods.extractors.webPageDataScrappers import WebPageDataScrappers
+from methods.extractors.apiRequests import ApiRequests
 from methods.loaders.fileSavers import FileSavers
 import json
 import os
@@ -22,3 +23,7 @@ for filename in os.listdir(config_path):
                 webscrapper = WebPageDataScrappers(url)
                 for i in v:
                     filesaver.saveContent(webscrapper.handleContent(i["tag"], i["attrs"]), i["file_name"], i["attrs"], sep=i["sep"])
+            
+            if "api" in filename:
+                for i in v:
+                    response = ApiRequests(url, headers=i['api_headers']).make_request(i['endpoint_path'])
