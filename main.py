@@ -26,4 +26,6 @@ for filename in os.listdir(config_path):
             
             if "api" in filename:
                 for i in v:
-                    response = ApiRequests(url, headers=i['api_headers']).make_request(i['endpoint_path'])
+                    response = json.dumps(ApiRequests(url, headers=i['api_headers']).make_request(i['endpoint_path']).json())
+
+                    filesaver.saveContent(response, i["file_name"])

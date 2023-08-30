@@ -1,0 +1,12 @@
+{
+    "https://www.freetogame.com/api/":[
+        {
+            "api_headers":"",
+            "endpoint_path":"games",
+            "file_name":"freetogame_api.json"
+            
+         }
+        ]
+
+}
+
