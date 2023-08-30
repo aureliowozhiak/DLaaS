@@ -1,21 +1,24 @@
 from methods.extractors.webPageDataScrappers import WebPageDataScrappers
 from methods.loaders.fileSavers import FileSavers
 import json
+import os
 
-
-#attrs = ["href","get_text"]
-#filesaver.saveContent(webscrapper.handleContent("a", attrs), "links.csv", attrs)
-#filesaver.saveContent(webscrapper.getHtml(), "wiki_python.html")
-
-
-#filesaver.saveContent(webscrapper.handleContent("a", attrs), "links.csv", attrs)
-
-with open('config_files/webscrapper.json', 'r') as file:
-    config_file = json.load(file)
+config_path = 'config_files'
 
 filesaver = FileSavers()
 
-for url,v in config_file.items():
-    webscrapper = WebPageDataScrappers(url)
-    for i in v:
-        eval(f'filesaver.saveContent(webscrapper.handleContent("{i["tag"]}", {i["attrs"]}), "{i["file_name"]}", {i["attrs"]}, sep="{i["sep"]}")')
+for filename in os.listdir(config_path):
+    full_path = os.path.join(config_path, filename)
+    if os.path.isfile(full_path):
+        print(filename)
+        with open(full_path, 'r') as file:
+            config_file = json.load(file)
+
+        
+
+        for url,v in config_file.items():
+
+            if "webscrapper" in filename:
+                webscrapper = WebPageDataScrappers(url)
+                for i in v:
+                    filesaver.saveContent(webscrapper.handleContent(i["tag"], i["attrs"]), i["file_name"], i["attrs"], sep=i["sep"])
