@@ -10,7 +10,7 @@ import json
 
 #filesaver.saveContent(webscrapper.handleContent("a", attrs), "links.csv", attrs)
 
-with open('config_file.json', 'r') as file:
+with open('webscrapper_config_file.json', 'r') as file:
     config_file = json.load(file)
 
 filesaver = FileSavers()
