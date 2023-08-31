@@ -6,3 +6,4 @@ __pycache__/
 
 # Output files
 *.csv
+output/*.json
