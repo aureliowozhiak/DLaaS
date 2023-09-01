@@ -19,3 +19,32 @@ Com o Data Lake as a Service, você não precisa se preocupar com a infraestrutu
 ## Projeto no Miro
 
 https://miro.com/app/board/uXjVMr3ALEo=/?share_link_id=493109150457
+
+<!-- Setup do Projeto -->
+## Setup do Projeto
+
+Siga as etapas abaixo para configurar e rodar o projeto Data Lake as a Service em seu ambiente.
+
+### Instalar as Dependências
+
+Para instalar as dependências necessárias, você pode usar o comando a seguir:
+
+```bash
+pip install -r requirements.txt
+```
+
+Isso garantirá que todas as bibliotecas e pacotes necessários sejam instalados.
+
+### Rodar o Projeto
+
+Para iniciar o projeto, execute o seguinte comando:
+
+```bash
+python -m main
+```
+
+Isso executará o código principal e inicializará o Data Lake as a Service em seu ambiente local.
+
+Lembre-se de configurar as variáveis de ambiente e qualquer outra configuração necessária antes de executar o projeto. Certifique-se também de consultar a documentação para obter informações adicionais sobre como usar o Data Lake as a Service Open Source.
+
+Aproveite o uso do Data Lake as a Service e comece a explorar os benefícios que ele oferece para o armazenamento e análise de dados em sua empresa!
