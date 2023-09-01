@@ -7,8 +7,9 @@ class WebPageDataScrappers:
         self.html_soup_content = BeautifulSoup(requests.get(self.url).content, 'html.parser')
     
     def getTagContent(self, tag_name):
-       return [str(tag) for tag in self.html_soup_content.find_all(tag_name)]
-
+        return self.html_soup_content.find_all(tag_name)
+    
+    
     def getHtml(self):
         return str(self.html_soup_content)
 
