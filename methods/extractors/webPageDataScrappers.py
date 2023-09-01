@@ -9,6 +9,7 @@ class WebPageDataScrappers:
     def getTagContent(self, tag_name):
         return self.html_soup_content.find_all(tag_name)
     
+    
     def getHtml(self):
         return str(self.html_soup_content)
 
@@ -25,3 +26,30 @@ class WebPageDataScrappers:
 
         return contents
         
+    def countWords(self):
+        text_content = self.html_soup_content.get_text()
+        words = text_content.split()
+        return len(words)
+
+    def getImages(self):
+        img_tags = self.html_soup_content.find_all('img')
+        return [img.get('src') for img in img_tags if img.get('src')]
+
+    def countTags(self, tag_name):
+        tag_count = len(self.html_soup_content.find_all(tag_name))
+        return tag_count
+
+    def getMetaTags(self):
+        meta_tags = self.html_soup_content.find_all('meta')
+        meta_data = {}
+        for meta in meta_tags:
+            name = meta.get('name')
+            content = meta.get('content')
+            if name and content:
+                meta_data[name] = content
+        return meta_data
+
+    def searchText(self, search_text):
+        text_content = self.html_soup_content.get_text()
+        occurrences = [line.strip() for line in text_content.splitlines() if search_text in line]
+        return occurrences
