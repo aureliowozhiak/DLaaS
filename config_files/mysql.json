@@ -4,7 +4,9 @@
         "password": "root",
         "schema": "dlaas",
         "tables": {
-            "person": "person.json"
+            "person": {
+                "filename": "person.json"
+            }
         }
     }
 }

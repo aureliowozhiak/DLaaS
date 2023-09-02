@@ -27,13 +27,25 @@ class MySQLConnector:
         else:
             raise Exception("Invalid query")
 
-    def query(self, query:str):
-        query = MySQLConnector.sanitize_query(query)
+    def build_query_string(table:str, columns:list = None, where:str = None, limit:int = None):
+        if columns is None or columns == []:
+            select_columns = "*"
+        else:
+            select_columns = ",".join(columns)
+        query_string = f"SELECT {select_columns} FROM {table}"
+        if not (where is None):
+            query_string += f" WHERE {where}"
+        if not (limit is None):
+            query_string += f" LIMIT {limit}"
+        return query_string
+
+    def query(self, table:str, columns:list = None, where:str = None, limit:int = None):
+        query = MySQLConnector.build_query_string(table, columns, where, limit)
         with self._connection as conn:
             return conn.execute(sqlalchemy.text(query))
 
-    def extract(self, table:str):
-        result = self.query(f"SELECT * FROM {table};")
+    def extract(self, table:str, columns:list = None, where:str = None, limit = None):
+        result = self.query(table, columns, where, limit)
         columns = [col for col in result.keys()]
         data = []
         for row in result.all():

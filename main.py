@@ -41,6 +41,11 @@ for filename in os.listdir(config_path):
                     host=host,
                     schema=schema
                 )
-                for table, output_file in v["tables"].items():
-                    table_data = connector.extract(table)
-                    filesaver.save_content(table_data, output_file)
+                for table, table_config in v["tables"].items():
+                    table_data = connector.extract(
+                        table, 
+                        table_config.get("columns"), 
+                        table_config.get("where"), 
+                        table_config.get("limit")
+                    )
+                    filesaver.save_content(table_data, table_config["filename"])
