@@ -1,0 +1,10 @@
+{
+    "localhost:3306": {
+        "user": "root",
+        "password": "root",
+        "schema": "dlaas",
+        "tables": {
+            "person": "person.json"
+        }
+    }
+}

@@ -1,5 +1,6 @@
 from methods.extractors.webPageDataScrappers import WebPageDataScrappers
 from methods.extractors.apiRequests import ApiRequests
+from methods.extractors.databaseConnectors import MySQLConnector
 from methods.loaders.fileSavers import FileSavers
 import json
 import os
@@ -29,3 +30,18 @@ for filename in os.listdir(config_path):
                     response = json.dumps(ApiRequests(url, headers=i['api_headers']).make_request(i['endpoint_path']).json())
 
                     filesaver.saveContent(response, i["file_name"])
+
+            if "mysql" in filename:
+                host = url
+                user = v["user"]
+                password = v["password"]
+                schema = v.get("schema") #opcional
+                connector = MySQLConnector(
+                    user=user, 
+                    password=password,
+                    host=host,
+                    schema=schema
+                )
+                for table, output_file in v["tables"].items():
+                    table_data = connector.extract(table)
+                    filesaver.saveContent(table_data, output_file)
