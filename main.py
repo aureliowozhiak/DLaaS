@@ -22,10 +22,10 @@ for filename in os.listdir(config_path):
             if "webscrapper" in filename:
                 webscrapper = WebPageDataScrappers(url)
                 for i in v:
-                    filesaver.saveContent(webscrapper.handleContent(i["tag"], i["attrs"]), i["file_name"], i["attrs"], sep=i["sep"])
+                    filesaver.save_content(webscrapper.handle_content(i["tag"], i["attrs"]), i["file_name"], i["attrs"], sep=i["sep"])
             
             if "api" in filename:
                 for i in v:
                     response = json.dumps(ApiRequests(url, headers=i['api_headers']).make_request(i['endpoint_path']).json())
 
-                    filesaver.saveContent(response, i["file_name"])
+                    filesaver.save_content(response, i["file_name"])
