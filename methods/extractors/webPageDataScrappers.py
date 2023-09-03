@@ -15,7 +15,7 @@ class WebPageDataScrappers:
 
     def handle_content(self, tag_name, attrs):
         contents = []
-        for tagContent in self.getTagContent(tag_name):
+        for tagContent in self.get_tag_content(tag_name):
             tag_contents = []
             for attr in attrs:
                 if tagContent.has_attr(attr):
