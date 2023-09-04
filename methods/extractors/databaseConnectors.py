@@ -44,7 +44,7 @@ class MySQLConnector:
         with self._connection as conn:
             return conn.execute(sqlalchemy.text(query))
 
-    def extract(self, table:str, columns:list = None, where:str = None, limit = None):
+    def extract(self, table:str, columns:list = None, where:str = None, limit = None, return_type:str = "json"):
         result = self.query(table, columns, where, limit)
         columns = [col for col in result.keys()]
         data = []
@@ -53,4 +53,7 @@ class MySQLConnector:
             for value in zip(columns, row):
                 row_data[value[0]] = value[1]
             data.append(row_data)
-        return json.dumps(data, ensure_ascii=False)
+        if return_type == "json":
+            return json.dumps(data, ensure_ascii=False)
+        else:
+            return data
