@@ -5,7 +5,7 @@ class FileSavers:
         pass
 
     def save_content(self, content, file_name, columns=[], sep=","):
-        with open(f"output/{file_name}", "w") as file:
+        with open(f"output/{file_name}", "w", encoding="utf-8") as file:
             if file_name.endswith(".csv"):
                 file.write(sep.join(columns) + "\n")
 
