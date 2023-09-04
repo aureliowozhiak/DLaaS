@@ -1,4 +1,7 @@
 import sqlalchemy
+from sqlalchemy import create_engine, text
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy.exc import OperationalError
 import json
 
 class MySQLConnector:
@@ -46,6 +49,79 @@ class MySQLConnector:
 
     def extract(self, table:str, columns:list = None, where:str = None, limit = None, return_type:str = "json"):
         result = self.query(table, columns, where, limit)
+        columns = [col for col in result.keys()]
+        data = []
+        for row in result.all():
+            row_data = {}
+            for value in zip(columns, row):
+                row_data[value[0]] = value[1]
+            data.append(row_data)
+        if return_type == "json":
+            return json.dumps(data, ensure_ascii=False)
+        else:
+            return data
+
+class PostgresConnector:
+    def __init__(self, user: str, password: str, host: str, port: str, db_name: str) -> None:
+        self._user = user
+        self._password = password
+        self._host = host
+        self._port = port
+        self._db_name = db_name
+        self._connection_string = f'postgresql://{self._user}:{self._password}@{self._host}:{self._port}/{self._db_name}'
+        self._engine = create_engine(self._connection_string)
+        self._db_session = None
+    
+    def connect(self):
+        try:
+            Session = sessionmaker(bind=self._engine)
+            self._db_session = Session()
+            print('Successfully connected!')
+        except OperationalError as e:
+            print(f'The following error occurred: {e}')
+    
+    def disconnect(self):
+        if self._db_session:
+            self._db_session.close()
+            print('Disconnected!')
+        else: 
+            print('Not connected to any database')
+            
+    #Função criada pelo devbrunorm
+    def sanitize_query(query:str):
+        query = query.lower().strip()
+        query = query.replace("--", "")
+        query = query.split(";")[0]
+        if query.startswith("select") and "from" in query:
+            return text(query)
+        else:
+            raise Exception("Invalid query")
+
+    #Função criada pelo devbrunorm
+    def build_query_string(table:str, columns:list = None, where:str = None, limit:int = None):
+        if columns is None or columns == []:
+            select_columns = "*"
+        else:
+            select_columns = ",".join(columns)
+        query_string = f"SELECT {select_columns} FROM {table}"
+        if not (where is None):
+            query_string += f" WHERE {where}"
+        if not (limit is None):
+            query_string += f" LIMIT {limit}"
+        return query_string
+    
+    def query_data(self, table: str, columns: list = None, where: str = None, limit: int = None):
+        query = PostgresConnector.build_query_string(table, columns, where, limit)
+        if self._db_session:
+            try:
+                data = self._db_session.execute(text(query)).fetchall()
+                return data
+            except OperationalError as e:
+                print(f'Error executing query: {e}')
+    
+    #Função criada pelo devbrunorm
+    def extract(self, table:str, columns:list = None, where:str = None, limit = None, return_type:str = "json"):
+        result = self.query_data(table, columns, where, limit)
         columns = [col for col in result.keys()]
         data = []
         for row in result.all():
