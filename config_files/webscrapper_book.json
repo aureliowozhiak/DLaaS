@@ -1,0 +1,10 @@
+{
+    "https://books.toscrape.com/index.html":[
+        {
+            "tag": "a",
+            "attrs": ["href", "get_text"],
+            "file_name": "links_books.csv",
+            "sep": ";"
+         }
+    ]
+}
