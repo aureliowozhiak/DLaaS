@@ -3,3 +3,4 @@ beautifulsoup4==4.12.2
 pandas==2.1.0
 SQLAlchemy==2.0.20
 PyMySQL==1.1.0
+coverage

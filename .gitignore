@@ -1,3 +1,7 @@
+# Python test result related files
+.coverage
+htmlcov/
+
 # Python virtual environment
 venv/
 

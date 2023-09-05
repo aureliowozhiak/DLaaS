@@ -21,10 +21,10 @@ class DataCleaner:
             self.dataframe = self.dataframe.dropna(subset=columns)
         elif method == 'fill':
             # Preencha os valores nulos com um valor específico, por exemplo, 0
-            self.dataframe.fillna(0, inplace=True, subset=columns)
+            self.dataframe.fillna(0, inplace=True)
         elif method == 'mean':
             # Preencha os valores nulos com a média das colunas
-            self.dataframe.fillna(self.dataframe.mean(), inplace=True, subset=columns)
+            self.dataframe.fillna(self.dataframe.mean(), inplace=True)
 
     def clean_data(self):
         self.remove_duplicates()
