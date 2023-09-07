@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - "master"
+
+jobs:
+  lint:
+    strategy:
+      fail-fast: true
+      matrix:
+        python-version: ['3.10']
+        os: [ubuntu-latest]
+
+    runs-on: ${{matrix.os}}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: ${{matrix.python-version}}
+      - name: Install Project
+        run: pip install -r requirements.dev.txt
+      - name: Look for style errors
+        run: pflake8
+      - name: Check for importing style
+        run: isort --profile=black --check --diff tests
+      - name: Look for auto format errors
+        run: black --check --diff tests
+
+  tests:
+    needs: lint
+    strategy:
+      fail-fast: true
+      matrix:
+        python-version: ['3.10']
+        os: [ubuntu-latest]
+
+    runs-on: ${{matrix.os}}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: ${{matrix.python-version}}
+      - name: Install Dev Requirements
+        run: pip install -r requirements.dev.txt
+      - name: Run tests
+        run: pytest -v --junitxml=test-result.xml
+      - name: publish junit results
+        uses: EnricoMi/publish-unit-test-result-action@v1
+        if: always()
+        with:
+          files: test-result.xml
+          check_name: Test Result (Python ${{matrix.python-version}})
