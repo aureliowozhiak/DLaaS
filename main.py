@@ -4,6 +4,10 @@ from methods.extractors.databaseConnectors import MySQLConnector
 from methods.loaders.fileSavers import FileSavers
 import json
 import os
+import logging
+
+logging.basicConfig(filename='logs/example.log', encoding='utf-8', level=logging.DEBUG)
+
 
 config_path = 'config_files'
 
@@ -24,13 +28,13 @@ for filename in os.listdir(config_path):
                 webscrapper = WebPageDataScrappers(url)
                 for i in v:
                     filesaver.save_content(webscrapper.handle_content(i["tag"], i["attrs"]), i["file_name"], i["attrs"], sep=i["sep"])
-            
+                    logging.info(f"Save {i['file_name']}")
             if "api" in filename:
                 for i in v:
                     response = json.dumps(ApiRequests(url, headers=i['api_headers']).make_request(i['endpoint_path']).json())
                     filesaver.save_content(response, i["file_name"])
 
-            if "mysql" in filename:
+            if "_mysql" in filename:
                 host = url
                 user = v["user"]
                 password = v["password"]
