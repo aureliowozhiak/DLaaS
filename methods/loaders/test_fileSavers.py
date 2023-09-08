@@ -2,6 +2,7 @@ from unittest import TestCase
 from unittest.mock import mock_open, patch
 from .fileSavers import FileSavers
 
+
 class FileSaversTestSuite(TestCase):
     def setUp(self):
         self.fileSavers = FileSavers()

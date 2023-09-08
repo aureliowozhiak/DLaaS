@@ -5,9 +5,11 @@ from .webPageDataScrappers import WebPageDataScrappers
 
 test_html = '<html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type" name="test-tag"/><meta/></head><p>paragraph 1</p><p>paragraph 2</p><img src="img-src-1"/><img src="img-src-2"/></html>'
 
+
 class FakeResponse:
     def __init__(self, content):
         self.content = content
+
 
 class WebPageDataScrappersTestSuite(TestCase):
     def setUp(self):

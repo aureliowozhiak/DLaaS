@@ -1,0 +1,2 @@
+[flake8]
+exclude = dlaas_env/,venv/
