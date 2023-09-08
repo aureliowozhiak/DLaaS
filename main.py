@@ -21,27 +21,34 @@ for filename in os.listdir(config_path):
         with open(full_path, 'r') as file:
             config_file = json.load(file)
 
-        
-
-        for url,v in config_file.items():
+        for url, v in config_file.items():
 
             if "webscrapper" in filename:
                 webscrapper = WebPageDataScrappers(url)
                 for i in v:
-                    filesaver.save_content(webscrapper.handle_content(i["tag"], i["attrs"]), i["file_name"], i["attrs"], sep=i["sep"])
+                    filesaver.save_content(
+                        webscrapper.handle_content(
+                            i["tag"],
+                            i["attrs"]),
+                        i["file_name"],
+                        i["attrs"],
+                        sep=i["sep"])
                     logging.info(f"Save {i['file_name']}")
             if "api" in filename:
                 for i in v:
-                    response = json.dumps(ApiRequests(url, headers=i['api_headers']).make_request(i['endpoint_path']).json())
+                    response = json.dumps(
+                        ApiRequests(
+                            url, headers=i['api_headers']).make_request(
+                            i['endpoint_path']).json())
                     filesaver.save_content(response, i["file_name"])
 
             if "_mysql" in filename:
                 host = url
                 user = v["user"]
                 password = v["password"]
-                schema = v.get("schema") # opcional
+                schema = v.get("schema")  # opcional
                 connector = MySQLConnector(
-                    user=user, 
+                    user=user,
                     password=password,
                     host=host,
                     schema=schema
