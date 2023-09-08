@@ -16,3 +16,15 @@ INFO:root:Save links_dataengineerhelp.csv
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): books.toscrape.com:443
 DEBUG:urllib3.connectionpool:https://books.toscrape.com:443 "GET /index.html HTTP/1.1" 200 51294
 INFO:root:Save links_books.csv
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.freetogame.com:443
+DEBUG:urllib3.connectionpool:https://www.freetogame.com:443 "GET /api//games HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pt.wikipedia.org:443
+DEBUG:urllib3.connectionpool:https://pt.wikipedia.org:443 "GET /wiki/Python HTTP/1.1" 200 53512
+INFO:root:Save links_wiki_python.csv
+INFO:root:Save urls_wiki_python.csv
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dataengineer.help:443
+DEBUG:urllib3.connectionpool:https://dataengineer.help:443 "GET /knowledge/ HTTP/1.1" 200 None
+INFO:root:Save paragraph_dataengineerhelp.csv
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): books.toscrape.com:443
+DEBUG:urllib3.connectionpool:https://books.toscrape.com:443 "GET /index.html HTTP/1.1" 200 51294
+INFO:root:Save links_books.csv

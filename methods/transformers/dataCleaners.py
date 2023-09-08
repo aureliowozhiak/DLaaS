@@ -1,4 +1,4 @@
-import pandas as pd
+# import pandas as pd
 
 class DataCleaner:
 
@@ -9,14 +9,6 @@ class DataCleaner:
         self.dataframe = self.dataframe.drop_duplicates()
 
     def handle_missing_values(self, method='drop', columns=None):
-        """
-        Lida com valores nulos no DataFrame.
-
-        Args:
-            method (str): Método para lidar com valores nulos. Pode ser 'drop' para remover as linhas com valores nulos,
-                          'fill' para preencher os valores nulos com um valor específico ou 'mean' para preencher com a média.
-            columns (list): Lista das colunas em que o método deve ser aplicado. Se None, aplica a todas as colunas.
-        """
         if method == 'drop':
             self.dataframe = self.dataframe.dropna(subset=columns)
         elif method == 'fill':
@@ -24,7 +16,8 @@ class DataCleaner:
             self.dataframe.fillna(0, inplace=True, subset=columns)
         elif method == 'mean':
             # Preencha os valores nulos com a média das colunas
-            self.dataframe.fillna(self.dataframe.mean(), inplace=True, subset=columns)
+            mean = self.dataframe.mean()
+            self.dataframe.fillna(mean, inplace=True, subset=columns)
 
     def clean_data(self):
         self.remove_duplicates()

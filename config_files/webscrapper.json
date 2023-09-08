@@ -20,5 +20,13 @@
             "file_name": "links_dataengineerhelp.csv",
             "sep": ";"
          }
+    ],
+    "https://dataengineer.help/knowledge/":[
+        {
+            "tag": "p",
+            "attrs": ["get_text"],
+            "file_name": "paragraph_dataengineerhelp.csv",
+            "sep": ";"
+         }
     ]
 }
