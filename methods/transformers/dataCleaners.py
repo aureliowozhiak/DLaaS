@@ -24,7 +24,8 @@ class DataCleaner:
             self.dataframe.fillna(0, inplace=True)
         elif method == 'mean':
             # Preencha os valores nulos com a média das colunas
-            self.dataframe.fillna(self.dataframe.mean(), inplace=True)
+            # inplace=True removido pois trigava warning 'A value is trying to be set on a copy of a slice from a DataFrame'
+            self.dataframe = self.dataframe.fillna(self.dataframe.mean())
 
     def clean_data(self):
         self.remove_duplicates()

@@ -35,10 +35,15 @@ class DataCleanerTestSuite(TestCase):
         expected = pd.DataFrame([[1,2,3], [4,5,6], [1,2,3]])
         self.assertIsNone(pd.testing.assert_frame_equal(df, expected, check_dtype=False))
 
-    def test_handle_missing_values_drop(self):
+    def test_handle_missing_values_fill(self):
         self.cleaner.handle_missing_values(method='fill')
         df = self.cleaner.get_cleaned_dataframe()
         expected = pd.DataFrame([[1,2,3], [4,5,6], [1,2,3], [0,0,0]])
         self.assertIsNone(pd.testing.assert_frame_equal(df, expected, check_dtype=False))
+
+    def test_no_modifications_if_method_is_invalid(self):
+        self.cleaner.handle_missing_values(method='invalid_method')
+        df = self.cleaner.get_cleaned_dataframe()
+        self.assertIsNone(pd.testing.assert_frame_equal(df, self.df, check_dtype=False))
 
         

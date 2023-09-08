@@ -1,2 +1,2 @@
 test:
-	python -m coverage run -m unittest discover && python -m coverage html --omit="test_*.py,__init__.py"
+	python -m pytest -v --cov --cov-report=html --cov-report=term
