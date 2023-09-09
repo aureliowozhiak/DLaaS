@@ -1,8 +1,9 @@
+import json
+
 import sqlalchemy
 from sqlalchemy import create_engine, text
-from sqlalchemy.orm import sessionmaker
 from sqlalchemy.exc import OperationalError
-import json
+from sqlalchemy.orm import sessionmaker
 
 
 class MySQLConnector:

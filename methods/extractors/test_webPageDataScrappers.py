@@ -1,6 +1,8 @@
-import requests
 from unittest import TestCase
 from unittest.mock import MagicMock
+
+import requests
+
 from .webPageDataScrappers import WebPageDataScrappers
 
 test_html = ''.join(
