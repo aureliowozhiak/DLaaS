@@ -19,7 +19,10 @@ class ApiRequestsTestSuite(TestCase):
         response = self.apiRequests.make_request(endpoint)
 
         self.assertEqual(response, return_value)
-        requests.request.assert_called_with('GET',
-                                            f'{self.base_url}/{endpoint}',
-                                            headers=None, params=None,
-                                            data=None)
+        requests.request.assert_called_with(
+            "GET",
+            f"{self.base_url}/{endpoint}",
+            headers=None,
+            params=None,
+            data=None
+        )

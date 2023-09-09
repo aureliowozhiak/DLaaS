@@ -5,12 +5,15 @@ import requests
 
 from .webPageDataScrappers import WebPageDataScrappers
 
-test_html = ''.join(
-    ['<html><head><meta content="text/html; charset=utf-8"',
-     ' http-equiv="Content-Type" name="test-tag"/>',
-     '<meta/></head>',
-     '<p>paragraph 1</p><p>paragraph 2</p><img src="img-src-1"/>',
-     '<img src="img-src-2"/></html>'])
+test_html = "".join(
+    [
+        '<html><head><meta content="text/html; charset=utf-8"',
+        ' http-equiv="Content-Type" name="test-tag"/>',
+        "<meta/></head>",
+        '<p>paragraph 1</p><p>paragraph 2</p><img src="img-src-1"/>',
+        '<img src="img-src-2"/></html>',
+    ]
+)
 
 
 class FakeResponse:
@@ -30,17 +33,17 @@ class WebPageDataScrappersTestSuite(TestCase):
         self.assertEqual(html, test_html)
 
     def test_can_get_tag_content(self):
-        expected = ['<p>paragraph 1</p>', '<p>paragraph 2</p>']
+        expected = ["<p>paragraph 1</p>", "<p>paragraph 2</p>"]
         content = self.scrapper.get_tag_content("p")
         self.assertEqual([str(c) for c in content], expected)
 
     def test_can_handle_content_attr(self):
-        expected = [['img-src-1'], ['img-src-2']]
+        expected = [["img-src-1"], ["img-src-2"]]
         content = self.scrapper.handle_content(["img"], ["src"])
         self.assertEqual(content, expected)
 
     def test_can_handle_content_get_text(self):
-        expected = [['paragraph 1'], ['paragraph 2']]
+        expected = [["paragraph 1"], ["paragraph 2"]]
         content = self.scrapper.handle_content(["p"], ["get_text"])
         self.assertEqual(content, expected)
 
@@ -49,7 +52,7 @@ class WebPageDataScrappersTestSuite(TestCase):
         self.assertEqual(word_count, 3)
 
     def test_can_get_images(self):
-        expected = ['img-src-1', 'img-src-2']
+        expected = ["img-src-1", "img-src-2"]
         imgs = self.scrapper.get_images()
         self.assertEqual(imgs, expected)
 
@@ -62,6 +65,6 @@ class WebPageDataScrappersTestSuite(TestCase):
         self.assertEqual(meta_tags["test-tag"], "text/html; charset=utf-8")
 
     def test_can_search_text(self):
-        expected = ['paragraph 1paragraph 2']
+        expected = ["paragraph 1paragraph 2"]
         result = self.scrapper.search_text("paragraph")
         self.assertEqual(result, expected)
