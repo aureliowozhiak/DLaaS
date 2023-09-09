@@ -1,10 +1,10 @@
 import json
 import os
 
-from .methods.extractors.apiRequests import ApiRequests
-from .methods.extractors.databaseConnectors import MySQLConnector
-from .methods.extractors.webPageDataScrappers import WebPageDataScrappers
-from .methods.loaders.fileSavers import FileSavers
+from methods.extractors.apiRequests import ApiRequests
+from methods.extractors.databaseConnectors import MySQLConnector
+from methods.extractors.webPageDataScrappers import WebPageDataScrappers
+from methods.loaders.fileSavers import FileSavers
 
 config_path = "config_files"
 
