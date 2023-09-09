@@ -1,15 +1,16 @@
 import requests
 from bs4 import BeautifulSoup
 
+
 class WebPageDataScrappers:
     def __init__(self, url):
         self.url = url
-        self.html_soup_content = BeautifulSoup(requests.get(self.url).content, 'html.parser')
-    
+        self.html_soup_content = BeautifulSoup(requests.get(self.url).content,
+                                               'html.parser')
+
     def get_tag_content(self, tag_name):
         return self.html_soup_content.find_all(tag_name)
-    
-    
+
     def get_html(self):
         return str(self.html_soup_content)
 
@@ -25,7 +26,7 @@ class WebPageDataScrappers:
             contents.append(tag_contents)
 
         return contents
-        
+
     def count_words(self):
         text_content = self.html_soup_content.get_text()
         words = text_content.split()
@@ -51,5 +52,6 @@ class WebPageDataScrappers:
 
     def search_text(self, search_text):
         text_content = self.html_soup_content.get_text()
-        occurrences = [line.strip() for line in text_content.splitlines() if search_text in line]
+        occurrences = [line.strip() for line in text_content.splitlines()
+                       if search_text in line]
         return occurrences

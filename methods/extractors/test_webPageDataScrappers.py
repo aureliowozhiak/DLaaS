@@ -3,7 +3,12 @@ from unittest import TestCase
 from unittest.mock import MagicMock
 from .webPageDataScrappers import WebPageDataScrappers
 
-test_html = '<html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type" name="test-tag"/><meta/></head><p>paragraph 1</p><p>paragraph 2</p><img src="img-src-1"/><img src="img-src-2"/></html>'
+test_html = ''.join(
+    ['<html><head><meta content="text/html; charset=utf-8"',
+     ' http-equiv="Content-Type" name="test-tag"/>',
+     '<meta/></head>',
+     '<p>paragraph 1</p><p>paragraph 2</p><img src="img-src-1"/>',
+     '<img src="img-src-2"/></html>'])
 
 
 class FakeResponse:

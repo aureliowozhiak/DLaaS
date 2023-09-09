@@ -16,9 +16,12 @@ class MySQLConnector:
 
     def _set_engine(self):
         if self._schema is None:
-            connection_string = f"mysql+pymysql://{self._user}:{self._password}@{self._host}"
+            connection_string = ''.join(
+                f"mysql+pymysql://{self._user}:{self._password}@", self._host)
         else:
-            connection_string = f"mysql+pymysql://{self._user}:{self._password}@{self._host}/{self._schema}"
+            connection_string = ''.join(
+                f"mysql+pymysql://{self._user}:{self._password}@",
+                f"{self._host}/{self._schema}")
         return sqlalchemy.create_engine(connection_string, pool_recycle=3600)
 
     def sanitize_query(query: str):
@@ -74,7 +77,9 @@ class PostgresConnector:
         self._host = host
         self._port = port
         self._db_name = db_name
-        self._connection_string = f'postgresql://{self._user}:{self._password}@{self._host}:{self._port}/{self._db_name}'
+        self._connection_string = ''.join(
+            f'postgresql://{self._user}:{self._password}@',
+            f'{self._host}:{self._port}/{self._db_name}')
         self._engine = create_engine(self._connection_string)
         self._db_session = None
 
