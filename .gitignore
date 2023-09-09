@@ -5,6 +5,7 @@ htmlcov/
 
 # Python virtual environment
 venv/
+.venv/
 
 # Python cache folders
 __pycache__/
@@ -12,3 +13,6 @@ __pycache__/
 # Output files
 output/*.csv
 output/*.json
+
+# vscode
+.vscode

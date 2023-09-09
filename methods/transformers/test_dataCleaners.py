@@ -8,7 +8,8 @@ from .dataCleaners import DataCleaner
 class DataCleanerTestSuite(TestCase):
     def setUp(self):
         self.df = pd.DataFrame(
-            [[1, 2, 3], [4, 5, 6], [1, 2, 3], [None, 0, None]])
+            [[1, 2, 3], [4, 5, 6], [1, 2, 3], [None, 0, None]]
+        )
         self.cleaner = DataCleaner(self.df)
 
     def test_can_return_dataframe(self):
@@ -24,7 +25,8 @@ class DataCleanerTestSuite(TestCase):
         self.cleaner.clean_data()
         df = self.cleaner.get_cleaned_dataframe()
         expected = pd.DataFrame(
-            [[1, 2, 3], [4, 5, 6], [2.5, 0, 4.5]], index=[0, 1, 3])
+            [[1, 2, 3], [4, 5, 6], [2.5, 0, 4.5]], index=[0, 1, 3]
+        )
         self.assertIsNone(pd.testing.assert_frame_equal(df, expected))
 
     def test_handle_missing_values_drop_as_default(self):
@@ -54,5 +56,6 @@ class DataCleanerTestSuite(TestCase):
     def test_no_modifications_if_method_is_invalid(self):
         self.cleaner.handle_missing_values(method="invalid_method")
         df = self.cleaner.get_cleaned_dataframe()
-        self.assertIsNone(pd.testing.assert_frame_equal(
-            df, self.df, check_dtype=False))
+        self.assertIsNone(
+            pd.testing.assert_frame_equal(df, self.df, check_dtype=False)
+        )

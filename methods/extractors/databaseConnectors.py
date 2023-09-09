@@ -7,13 +7,7 @@ from sqlalchemy.orm import sessionmaker
 
 
 class MySQLConnector:
-    def __init__(
-        self,
-        user: str,
-        password: str,
-        host: str,
-        schema: str = None
-    ):
+    def __init__(self, user: str, password: str, host: str, schema: str = None):
         self._user = user
         self._password = password
         self._host = host
@@ -23,23 +17,15 @@ class MySQLConnector:
 
     def _set_engine(self):
         if self._schema is None:
-            connection_string = "".join(
-                [
-                    f"mysql+pymysql://{self._user}:{self._password}@",
-                    self._host
-                ]
+            connection_string = (
+                f"mysql+pymysql://{self._user}:{self._password}@{self._host}"
             )
         else:
-            connection_string = "".join(
-                [
-                    f"mysql+pymysql://{self._user}:{self._password}@",
-                    f"{self._host}/{self._schema}"
-                ]
-            )
+            connection_string = f"mysql+pymysql://{self._user}:{self._password}@{self._host}/{self._schema}"  # noqa: E501
         return sqlalchemy.create_engine(connection_string, pool_recycle=3600)
 
     def sanitize_query(query: str):
-        # TODO: Melhorar a função de sanitização para evitar SQL injections
+        # TODO: Melhorar a fumção de sanitização para evitar SQL injections
         query = query.lower().strip()
         query = query.replace("--", "")
         query = query.split(";")[0]
@@ -67,7 +53,7 @@ class MySQLConnector:
         table: str,
         columns: list = None,
         where: str = None,
-        limit: int = None
+        limit: int = None,
     ):
         query = MySQLConnector.build_query_string(table, columns, where, limit)
         with self._connection as conn:
@@ -78,7 +64,7 @@ class MySQLConnector:
         table: str,
         columns: list = None,
         where: str = None,
-        limit: int = None,
+        limit=None,
         return_type: str = "json",
     ):
         result = self.query(table, columns, where, limit)
@@ -104,12 +90,7 @@ class PostgresConnector:
         self._host = host
         self._port = port
         self._db_name = db_name
-        self._connection_string = "".join(
-            [
-                f"postgresql://{self._user}:{self._password}@",
-                f"{self._host}:{self._port}/{self._db_name}"
-            ]
-        )
+        self._connection_string = f"postgresql://{self._user}:{self._password}@{self._host}:{self._port}/{self._db_name}"  # noqa: E501
         self._engine = create_engine(self._connection_string)
         self._db_session = None
 
@@ -158,10 +139,11 @@ class PostgresConnector:
         table: str,
         columns: list = None,
         where: str = None,
-        limit: int = None
+        limit: int = None,
     ):
-        query = PostgresConnector.build_query_string(table, columns,
-                                                     where, limit)
+        query = PostgresConnector.build_query_string(
+            table, columns, where, limit
+        )
         if self._db_session:
             try:
                 data = self._db_session.execute(text(query)).fetchall()

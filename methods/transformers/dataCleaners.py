@@ -11,11 +11,11 @@ class DataCleaner:
 
         Args:
             method (str): Método para lidar com valores nulos. Pode ser 'drop'
-                          para remover as linhas com valores nulos,
-                          'fill' para preencher os valores nulos com um valor
-                          específico ou 'mean' para preencher com a média.
-            columns (list): Lista das colunas em que o método deve ser
-                            aplicado. Se None, aplica a todas as colunas.
+            para remover as linhas com valores nulos,
+            'fill' para preencher os valores nulos com um valor específico ou
+            'mean' para preencher com a média.
+            columns (list): Lista das colunas em que o método deve ser aplicado. # noqa: E501
+            Se None, aplica a todas as colunas.
         """
         if method == "drop":
             self.dataframe = self.dataframe.dropna(subset=columns)
@@ -24,9 +24,6 @@ class DataCleaner:
             self.dataframe.fillna(0, inplace=True)
         elif method == "mean":
             # Preencha os valores nulos com a média das colunas
-            # inplace=True removido pois trigava warning
-            # 'A value is trying to be set on
-            # a copy of a slice from a DataFrame'
             self.dataframe = self.dataframe.fillna(self.dataframe.mean())
 
     def clean_data(self):

@@ -52,5 +52,6 @@ for filename in os.listdir(config_path):
                         table_config.get("where"),
                         table_config.get("limit"),
                     )
-                    filesaver.save_content(table_data,
-                                           table_config["filename"])
+                    filesaver.save_content(
+                        table_data, table_config["filename"]
+                    )

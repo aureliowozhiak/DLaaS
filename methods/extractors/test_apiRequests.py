@@ -24,5 +24,5 @@ class ApiRequestsTestSuite(TestCase):
             f"{self.base_url}/{endpoint}",
             headers=None,
             params=None,
-            data=None
+            data=None,
         )

@@ -28,8 +28,9 @@ class MySQLConnectorTestSuite(TestCase):
         self.host = "host"
         self.schema = "schema"
         sqlalchemy.create_engine = MagicMock()
-        self.conn = MySQLConnector(self.user, self.password,
-                                   self.host, self.schema)
+        self.conn = MySQLConnector(
+            self.user, self.password, self.host, self.schema
+        )
 
     def test_can_sanitize_query(self):
         query = "SELECT * FROM MY_TABLE WHERE PARAM=SOME_VAL"
