@@ -45,10 +45,4 @@ jobs:
       - name: Install Dev Requirements
         run: pip install -r requirements.dev.txt
       - name: Run tests
-        run: pytest -v --junitxml=test-result.xml
-      - name: publish junit results
-        uses: EnricoMi/publish-unit-test-result-action@v1
-        if: always()
-        with:
-          files: test-result.xml
-          check_name: Test Result (Python ${{matrix.python-version}})
+        run: pytest --verbose
