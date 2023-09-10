@@ -7,7 +7,9 @@ from sqlalchemy.orm import sessionmaker
 
 
 class MySQLConnector:
-    def __init__(self, user: str, password: str, host: str, schema: str = None):
+    def __init__(
+        self, user: str, password: str, host: str, schema: str = None
+    ):
         self._user = user
         self._password = password
         self._host = host
