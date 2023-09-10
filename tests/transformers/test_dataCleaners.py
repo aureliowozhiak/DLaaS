@@ -2,7 +2,7 @@ from unittest import TestCase
 
 import pandas as pd
 
-from .dataCleaners import DataCleaner
+from ...methods.transformers.dataCleaners import DataCleaner
 
 
 class DataCleanerTestSuite(TestCase):

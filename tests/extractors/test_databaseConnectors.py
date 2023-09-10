@@ -5,7 +5,8 @@ from unittest.mock import MagicMock, patch
 
 import sqlalchemy
 
-from .databaseConnectors import MySQLConnector, PostgresConnector
+from ...methods.extractors.databaseConnectors import (  # noqa: E501
+    MySQLConnector, PostgresConnector)
 
 
 class FakeQueryResult:

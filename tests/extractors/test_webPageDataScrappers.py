@@ -3,7 +3,7 @@ from unittest.mock import MagicMock
 
 import requests
 
-from .webPageDataScrappers import WebPageDataScrappers
+from ...methods.extractors.webPageDataScrappers import WebPageDataScrappers
 
 test_html = "".join(
     [
