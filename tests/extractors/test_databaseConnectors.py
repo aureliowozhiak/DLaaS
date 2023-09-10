@@ -36,7 +36,7 @@ class MySQLConnectorTestSuite(TestCase):
         self.host = "host"
         self.schema = "schema"
         sqlalchemy.create_engine = MagicMock()
-        self.conn = MySQLConnector(self.user, self.password, self.host, self.schema)
+        self.conn = MySQLConnector(self.user, self.password, self.host, self.schema)  # noqa: E501
 
     def test_can_sanitize_query(self):
         query = "SELECT * FROM MY_TABLE WHERE PARAM=SOME_VAL"
@@ -61,7 +61,7 @@ class MySQLConnectorTestSuite(TestCase):
         self.assertEqual(query, expected)
 
     def test_can_query(self):
-        self.conn._connection.execute = MagicMock(return_value=FakeQueryResult())
+        self.conn._connection.execute = MagicMock(return_value=FakeQueryResult())  # noqa: E501
         result = self.conn.query("MY_TABLE")
         self.assertIsNotNone(result)
 
