@@ -9,7 +9,7 @@ class DataCleanerTestSuite(TestCase):
     def setUp(self):
         self.df = pd.DataFrame(
             [[1, 2, 3], [4, 5, 6], [1, 2, 3], [None, 0, None]]
-        )
+        )  # noqa: E501
         self.cleaner = DataCleaner(self.df)
 
     def test_can_return_dataframe(self):
@@ -26,7 +26,7 @@ class DataCleanerTestSuite(TestCase):
         df = self.cleaner.get_cleaned_dataframe()
         expected = pd.DataFrame(
             [[1, 2, 3], [4, 5, 6], [2.5, 0, 4.5]], index=[0, 1, 3]
-        )
+        )  # noqa: E501
         self.assertIsNone(pd.testing.assert_frame_equal(df, expected))
 
     def test_handle_missing_values_drop_as_default(self):
@@ -58,4 +58,4 @@ class DataCleanerTestSuite(TestCase):
         df = self.cleaner.get_cleaned_dataframe()
         self.assertIsNone(
             pd.testing.assert_frame_equal(df, self.df, check_dtype=False)
-        )
+        )  # noqa: E501

@@ -6,7 +6,9 @@ from unittest.mock import MagicMock, patch
 import sqlalchemy
 
 from ...methods.extractors.databaseConnectors import (  # noqa: E501
-    MySQLConnector, PostgresConnector)
+    MySQLConnector,
+    PostgresConnector,
+)
 
 
 class FakeQueryResult:
@@ -34,9 +36,7 @@ class MySQLConnectorTestSuite(TestCase):
         self.host = "host"
         self.schema = "schema"
         sqlalchemy.create_engine = MagicMock()
-        self.conn = MySQLConnector(
-            self.user, self.password, self.host, self.schema
-        )
+        self.conn = MySQLConnector(self.user, self.password, self.host, self.schema)
 
     def test_can_sanitize_query(self):
         query = "SELECT * FROM MY_TABLE WHERE PARAM=SOME_VAL"
@@ -61,9 +61,7 @@ class MySQLConnectorTestSuite(TestCase):
         self.assertEqual(query, expected)
 
     def test_can_query(self):
-        self.conn._connection.execute = MagicMock(
-            return_value=FakeQueryResult()
-        )
+        self.conn._connection.execute = MagicMock(return_value=FakeQueryResult())
         result = self.conn.query("MY_TABLE")
         self.assertIsNotNone(result)
 
