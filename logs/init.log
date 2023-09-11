@@ -1,0 +1,4 @@
+2023-09-11 13:21:35,420 - INFO: Processando arquivo de configuração: apis.json
+2023-09-11 13:21:35,435 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api/
+2023-09-11 13:21:37,904 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-11 13:21:37,917 - INFO: Conectando ao banco de dados host=localhost:3306

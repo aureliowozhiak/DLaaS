@@ -48,3 +48,30 @@ Isso executará o código principal e inicializará o Data Lake as a Service em 
 Lembre-se de configurar as variáveis de ambiente e qualquer outra configuração necessária antes de executar o projeto. Certifique-se também de consultar a documentação para obter informações adicionais sobre como usar o Data Lake as a Service Open Source.
 
 Aproveite o uso do Data Lake as a Service e comece a explorar os benefícios que ele oferece para o armazenamento e análise de dados em sua empresa!
+
+## Sistema de Log no Projeto
+
+O projeto Data Lake as a Service incorpora um sistema de log usando a biblioteca `logging` do Python. Esse sistema de log foi implementado para auxiliar no acompanhamento da execução do código e na identificação de possíveis problemas durante o processamento.
+
+### Funcionamento Básico
+
+O sistema de log funciona da seguinte forma:
+
+1. **Configuração do Log**: No início do código, configuramos o sistema de log para direcionar as mensagens para um arquivo chamado "init.log" no diretório "logs". As mensagens de log são registradas com diferentes níveis, sendo o nível principal utilizado `INFO`, que é usado para mensagens informativas.
+
+2. **Registro de Mensagens**: Ao longo do código, utilizamos a função `logging.info()` para registrar mensagens informativas em momentos relevantes da execução. Por exemplo, registramos informações sobre URLs processadas, solicitações API e operações de banco de dados.
+
+3. **Benefícios**: O sistema de log proporciona vários benefícios, incluindo:
+   - Acompanhamento do Progresso: As mensagens de log ajudam a rastrear o que está acontecendo durante a execução do código.
+   - Depuração: Facilita a identificação de problemas e erros, permitindo uma depuração mais eficaz.
+   - Auditoria: As mensagens de log podem ser usadas para auditoria e análise pós-execução.
+
+4. **Localização dos Registros**: Todas as mensagens de log são registradas no arquivo "init.log" no diretório "logs". Certifique-se de criar a pasta "logs" no mesmo diretório onde o script está localizado ou ajuste o caminho do arquivo de log conforme necessário.
+
+### Uso Recomendado
+
+Ao executar o projeto Data Lake as a Service, é aconselhável consultar o arquivo de log "init.log" para obter informações sobre o progresso da execução. Se ocorrerem problemas, as mensagens de log fornecerão pistas valiosas para solucioná-los.
+
+Lembre-se de configurar as variáveis de ambiente e qualquer outra configuração necessária antes de executar o projeto. Consulte também a documentação para obter informações adicionais sobre o uso do Data Lake as a Service.
+
+A utilização do sistema de log ajuda a manter a transparência e a visibilidade durante a execução do projeto, contribuindo para uma experiência mais suave e confiável.
