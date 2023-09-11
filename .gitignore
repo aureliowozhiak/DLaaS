@@ -1,3 +1,8 @@
+# Python test result related files
+.coverage
+htmlcov/
+.pytest_cache
+
 # Python virtual environment
 venv/
 .venv/

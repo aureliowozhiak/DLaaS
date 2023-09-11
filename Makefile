@@ -9,11 +9,11 @@ virtualenv:
 	@python3 -m venv .venv
 
 lint:
-	@.venv/bin/pflake8 methods main.py
+	@.venv/bin/pflake8 methods main.py tests
 
 fmt:
-	@.venv/bin/isort methods main.py
-	@.venv/bin/black --line-length 79 methods main.py
+	@.venv/bin/isort methods main.py tests
+	@.venv/bin/black --line-length 79 methods main.py tests
 
 test:
-	@.venv/bin/pytest -v
+	@.venv/bin/pytest -v --cov --cov-report=html --cov-report=term

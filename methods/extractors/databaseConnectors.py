@@ -7,7 +7,9 @@ from sqlalchemy.orm import sessionmaker
 
 
 class MySQLConnector:
-    def __init__(self, user: str, password: str, host: str, schema: str):
+    def __init__(
+        self, user: str, password: str, host: str, schema: str = None
+    ):
         self._user = user
         self._password = password
         self._host = host
@@ -42,9 +44,9 @@ class MySQLConnector:
         else:
             select_columns = ",".join(columns)
         query_string = f"SELECT {select_columns} FROM {table}"
-        if not (where is None):
+        if where is not None:
             query_string += f" WHERE {where}"
-        if not (limit is None):
+        if limit is not None:
             query_string += f" LIMIT {limit}"
         return query_string
 
@@ -128,9 +130,9 @@ class PostgresConnector:
         else:
             select_columns = ",".join(columns)
         query_string = f"SELECT {select_columns} FROM {table}"
-        if not (where is None):
+        if where is not None:
             query_string += f" WHERE {where}"
-        if not (limit is None):
+        if limit is not None:
             query_string += f" LIMIT {limit}"
         return query_string
 
@@ -157,7 +159,7 @@ class PostgresConnector:
         table: str,
         columns: list = None,
         where: str = None,
-        limit=None,
+        limit: int = None,
         return_type: str = "json",
     ):
         result = self.query_data(table, columns, where, limit)
