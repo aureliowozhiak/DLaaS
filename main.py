@@ -9,7 +9,10 @@ from methods.loaders.fileSavers import FileSavers
 
 # Configurar o sistema de log
 log_file = 'logs/init.log'
-logging.basicConfig(filename=log_file, level=logging.INFO, format='%(asctime)s - %(levelname)s: %(message)s')
+logging.basicConfig(
+    filename=log_file,
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s: %(message)s')
 
 config_path = "config_files"
 filesaver = FileSavers()
