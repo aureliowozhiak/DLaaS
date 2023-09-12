@@ -23,27 +23,33 @@ https://miro.com/app/board/uXjVMr3ALEo=/?share_link_id=493109150457
 <!-- Setup do Projeto -->
 ## Setup do Projeto
 
-Siga as etapas abaixo para configurar e rodar o projeto Data Lake as a Service em seu ambiente.
+Siga as etapas abaixo para configurar e rodar o projeto Data Lake as a Service em seu ambiente usando o Poetry.
+
+### Instalar o Poetry
+
+Se você ainda não tem o Poetry instalado, você pode fazê-lo usando o gerenciador de pacotes pip. Abra seu terminal e execute o seguinte comando:
+
+```bash
+pip install poetry
+```
 
 ### Instalar as Dependências
 
-Para instalar as dependências necessárias, você pode usar o comando a seguir:
+Para instalar as dependências do projeto, execute o seguinte comando no diretório raiz do projeto:
 
 ```bash
-pip install -r requirements.txt
+poetry install
 ```
 
-Isso garantirá que todas as bibliotecas e pacotes necessários sejam instalados.
+Isso garantirá que todas as dependências necessárias sejam instaladas no ambiente virtual do projeto.
 
 ### Rodar o Projeto
-
 Para iniciar o projeto, execute o seguinte comando:
 
 ```bash
-python -m main
+poetry run python -m main
 ```
 
-Isso executará o código principal e inicializará o Data Lake as a Service em seu ambiente local.
 
 Lembre-se de configurar as variáveis de ambiente e qualquer outra configuração necessária antes de executar o projeto. Certifique-se também de consultar a documentação para obter informações adicionais sobre como usar o Data Lake as a Service Open Source.
 
