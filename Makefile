@@ -2,18 +2,27 @@
 
 install:
 	@echo "Installing for dev environment"
-	@.venv/bin/python -m pip install -r requirements.dev.txt
+	@poetry install --no-root
 
 virtualenv:
 	@echo "Creating virtual environment"
-	@python3 -m venv .venv
+	@poetry env use python3
 
 lint:
-	@.venv/bin/pflake8 methods main.py tests
+	@echo "Running linting"
+	@poetry run flake8 methods main.py tests
 
 fmt:
-	@.venv/bin/isort methods main.py tests
-	@.venv/bin/black --line-length 79 methods main.py tests
+	@echo "Formatting code"
+	@poetry run isort methods main.py tests
+	@poetry run black --line-length 79 methods main.py tests
 
 test:
-	@.venv/bin/pytest -v --cov --cov-report=html --cov-report=term
+	@echo "Running tests"
+	@poetry run pytest -v --cov --cov-report=html --cov-report=term
+
+clean:
+	@echo "Cleaning up"
+	@rm -rf .venv  # Remove virtual environment (if needed)
+	@poetry run find . -name '__pycache__' -exec rm -r {} +  # Remove __pycache__ directories
+	@poetry run find . -name '*.pyc' -exec rm {} +  # Remove .pyc files
