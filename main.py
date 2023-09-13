@@ -49,11 +49,12 @@ for filename in os.listdir(config_path):
             if "mysql" in filename:
                 logging.info(f'Conectando ao banco de dados host={url}')
                 host = url
+                port = v["port"]
                 user = v["user"]
                 password = v["password"]
-                schema = v.get("schema")  # opcional
+                db_name = v.get("db_name")  # opcional
                 connector = MySQLConnector(
-                    user=user, password=password, host=host, schema=schema
+                    user=user, password=password, host=host, port=port, db_name=db_name
                 )
                 for table, table_config in v["tables"].items():
                     table_data = connector.extract(
