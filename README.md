@@ -1,3 +1,5 @@
+Read this in [Portuguese](translations/README.pt.md).
+
 <!-- About the Service -->
 # Data Lake as a Service
 
