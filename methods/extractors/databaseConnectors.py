@@ -96,8 +96,6 @@ class MySQLConnector(DatabaseConnector):
         self._password = password
         self._host = host
         self._schema = schema
-        self._engine = self._set_engine()
-        self._connection = self._engine.connect()
         if self._schema is None:
             connection_string = (
                 f"mysql+pymysql://{self._user}:{self._password}@{self._host}"
