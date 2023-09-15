@@ -34,7 +34,7 @@ class DatabaseConnector:
             return query
         else:
             raise Exception("Invalid query")
-        
+
     def build_query_string(
         table: str, columns: list = None, where: str = None, limit: int = None
     ):

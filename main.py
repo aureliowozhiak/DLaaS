@@ -54,7 +54,11 @@ for filename in os.listdir(config_path):
                 password = v["password"]
                 db_name = v.get("db_name")  # opcional
                 connector = MySQLConnector(
-                    user=user, password=password, host=host, port=port, db_name=db_name
+                    user=user, 
+                    password=password, 
+                    host=host, 
+                    port=port, 
+                    db_name=db_name
                 )
                 for table, table_config in v["tables"].items():
                     table_data = connector.extract(
