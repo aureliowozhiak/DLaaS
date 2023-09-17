@@ -7,9 +7,6 @@ from sqlalchemy.orm import sessionmaker
 
 
 class DatabaseConnector:
-    def __init__() -> None:
-        pass
-
     def connect(self):
         try:
             Session = sessionmaker(bind=self._engine)
@@ -26,7 +23,7 @@ class DatabaseConnector:
             print("Not connected to any database")
 
     def sanitize_query(query: str):
-        # TODO: Melhorar a fumção de sanitização para evitar SQL injections
+        # TODO: Melhorar a função de sanitização para evitar SQL injections
         query = query.lower().strip()
         query = query.replace("--", "")
         query = query.split(";")[0]
@@ -57,10 +54,9 @@ class DatabaseConnector:
         limit=None,
         return_type: str = "json",
     ):
-        result = self.query(table, columns, where, limit)
-        columns = [col for col in result.keys()]
+        result = self.query_data(table, columns, where, limit)
         data = []
-        for row in result.all():
+        for row in result:
             row_data = {}
             for value in zip(columns, row):
                 row_data[value[0]] = value[1]
@@ -90,19 +86,26 @@ class DatabaseConnector:
 
 class MySQLConnector(DatabaseConnector):
     def __init__(
-        self, user: str, password: str, host: str, schema: str = None
+        self,
+        user: str,
+        password: str,
+        port: str,
+        host: str,
+        schema: str = None,
     ):
         self._user = user
         self._password = password
         self._host = host
         self._schema = schema
+        self._port = port
         if self._schema is None:
-            connection_string = (
-                f"mysql+pymysql://{self._user}:{self._password}@{self._host}"
-            )
+            connection_string = f"mysql+pymysql://{self._user}:{self._password}@{self._host}:{self._port}"  # noqa: E501
         else:
-            connection_string = f"mysql+pymysql://{self._user}:{self._password}@{self._host}/{self._schema}"  # noqa: E501
-        return sqlalchemy.create_engine(connection_string, pool_recycle=3600)
+            connection_string = f"mysql+pymysql://{self._user}:{self._password}@{self._host}:{self._port}/{self._schema}"  # noqa: E501
+        self._engine = sqlalchemy.create_engine(
+            connection_string, pool_recycle=3600
+        )
+        self._db_session = None
 
 
 class PostgresConnector(DatabaseConnector):

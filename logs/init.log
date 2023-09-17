@@ -2,3 +2,31 @@
 2023-09-11 13:21:35,435 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api/
 2023-09-11 13:21:37,904 - INFO: Processando arquivo de configuração: mysql.json
 2023-09-11 13:21:37,917 - INFO: Conectando ao banco de dados host=localhost:3306
+2023-09-17 15:07:22,932 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-17 15:07:22,935 - INFO: Conectando ao banco de dados host=localhost
+2023-09-17 15:08:13,143 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-17 15:08:13,143 - INFO: Conectando ao banco de dados host=localhost
+2023-09-17 15:09:57,546 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-17 15:09:57,546 - INFO: Conectando ao banco de dados host=localhost
+2023-09-17 15:10:35,100 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-17 15:10:35,100 - INFO: Conectando ao banco de dados host=localhost
+2023-09-17 15:11:03,555 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-17 15:11:03,556 - INFO: Conectando ao banco de dados host=localhost
+2023-09-17 15:23:14,038 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-17 15:23:14,038 - INFO: Conectando ao banco de dados host=localhost
+2023-09-17 15:24:21,841 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-17 15:24:21,841 - INFO: Conectando ao banco de dados host=localhost
+2023-09-17 15:24:55,492 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-17 15:24:55,492 - INFO: Conectando ao banco de dados host=localhost
+2023-09-17 15:25:27,152 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-17 15:25:27,152 - INFO: Conectando ao banco de dados host=localhost
+2023-09-17 15:25:51,746 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-17 15:25:51,747 - INFO: Conectando ao banco de dados host=localhost
+2023-09-17 15:27:05,064 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-17 15:27:05,064 - INFO: Conectando ao banco de dados host=localhost
+2023-09-17 15:27:43,639 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-17 15:27:43,639 - INFO: Conectando ao banco de dados host=localhost
+2023-09-17 15:28:15,557 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-17 15:28:15,558 - INFO: Conectando ao banco de dados host=localhost
+2023-09-17 15:28:15,590 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-09-17 15:28:15,593 - INFO: Executando web scraping para a URL: https://pt.wikipedia.org/wiki/Python

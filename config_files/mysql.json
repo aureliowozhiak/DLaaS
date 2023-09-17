@@ -6,7 +6,8 @@
         "db_name": "dlaas",
         "tables": {
             "person": {
-                "filename": "person.json"
+                "filename": "person.json",
+                "columns": ["ID", "NAME", "AGE"]
             }
         }
     }
