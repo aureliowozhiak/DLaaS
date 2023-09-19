@@ -73,9 +73,7 @@ class DatabaseConnector:
         where: str = None,
         limit: int = None,
     ):
-        query = DatabaseConnector.build_query_string(
-            table, columns, where, limit
-        )
+        query = DatabaseConnector.build_query_string(table, columns, where, limit)
         if self._db_session:
             try:
                 data = self._db_session.execute(text(query)).fetchall()
@@ -102,9 +100,7 @@ class MySQLConnector(DatabaseConnector):
             connection_string = f"mysql+pymysql://{self._user}:{self._password}@{self._host}:{self._port}"  # noqa: E501
         else:
             connection_string = f"mysql+pymysql://{self._user}:{self._password}@{self._host}:{self._port}/{self._schema}"  # noqa: E501
-        self._engine = sqlalchemy.create_engine(
-            connection_string, pool_recycle=3600
-        )
+        self._engine = sqlalchemy.create_engine(connection_string, pool_recycle=3600)
         self._db_session = None
 
 

@@ -69,9 +69,7 @@ class MySQLConnectorTestSuite(TestCase):
 
     def test_can_query_data(self):
         self.conn.connect()
-        self.conn._db_session.execute = MagicMock(
-            return_value=FakeQueryResult()
-        )
+        self.conn._db_session.execute = MagicMock(return_value=FakeQueryResult())
         result = self.conn.query_data("MY_TABLE")
         self.assertIsNotNone(result)
 
@@ -82,15 +80,11 @@ class MySQLConnectorTestSuite(TestCase):
 
     def test_can_extract_and_return_other_format(self):
         self.conn.query_data = MagicMock(return_value=mock_result)
-        data = self.conn.extract(
-            "MY_TABLE", return_type="other", columns=mock_columns
-        )
+        data = self.conn.extract("MY_TABLE", return_type="other", columns=mock_columns)
         self.assertEqual(len(data), 3)
 
     def test_can_create_connection_without_schema(self):
-        self.conn = MySQLConnector(
-            self.user, self.password, self.host, self.port
-        )
+        self.conn = MySQLConnector(self.user, self.password, self.host, self.port)
         self.assertIsNone(self.conn._schema)
 
 
@@ -192,7 +186,5 @@ class PostgresConnectorTestSuite(TestCase):
 
     def test_can_extract_and_return_other_format(self):
         self.conn.query_data = MagicMock(return_value=mock_result)
-        data = self.conn.extract(
-            "MY_TABLE", return_type="other", columns=mock_columns
-        )
+        data = self.conn.extract("MY_TABLE", return_type="other", columns=mock_columns)
         self.assertEqual(len(data), 3)
