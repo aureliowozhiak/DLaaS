@@ -1,5 +1,7 @@
 .PHONY: install virtualenv lint fmt test clean
 
+TARGET_FILES=methods main.py tests
+
 install:
 	@echo "Installing for dev environment"
 	@poetry install --no-root
@@ -10,12 +12,12 @@ virtualenv:
 
 lint:
 	@echo "Running linting"
-	@poetry run flake8 methods main.py tests
+	@poetry run flake8 ${TARGET_FILES}
 
 fmt:
 	@echo "Formatting code"
-	@poetry run isort methods main.py tests
-	@poetry run black --line-length 79 methods main.py tests
+	@poetry run isort ${TARGET_FILES}
+	@poetry run black --line-length 79 ${TARGET_FILES}
 
 test:
 	@echo "Running tests"

@@ -10,20 +10,24 @@ from ...methods.extractors.databaseConnectors import (  # noqa: E501
     PostgresConnector,
 )
 
+mock_columns = ["COL1", "COL2", "COL3"]
+
+mock_result = [
+    ["col1-res1", "col2-res1", "col3-res1"],
+    ["col1-res2", "col2-res2", "col3-res2"],
+    ["col1-res3", "col2-res3", "col3-res3"],
+]
+
 
 class FakeQueryResult:
     def __init__(self):
         pass
 
     def keys(self):
-        return ["COL1", "COL2", "COL3"]
+        return mock_columns
 
     def all(self):
-        return [
-            ["col1-res1", "col2-res1", "col3-res1"],
-            ["col1-res2", "col2-res2", "col3-res2"],
-            ["col1-res3", "col2-res3", "col3-res3"],
-        ]
+        return mock_result
 
     def fetchall(self):
         return self.all()
@@ -35,9 +39,10 @@ class MySQLConnectorTestSuite(TestCase):
         self.password = "password"
         self.host = "host"
         self.schema = "schema"
+        self.port = "3306"
         sqlalchemy.create_engine = MagicMock()
         self.conn = MySQLConnector(
-            self.user, self.password, self.host, self.schema
+            self.user, self.password, self.host, self.port, self.schema
         )  # noqa: E501
 
     def test_can_sanitize_query(self):
@@ -62,25 +67,30 @@ class MySQLConnectorTestSuite(TestCase):
         query = MySQLConnector.build_query_string("MY_TABLE")
         self.assertEqual(query, expected)
 
-    def test_can_query(self):
-        self.conn._connection.execute = MagicMock(
+    def test_can_query_data(self):
+        self.conn.connect()
+        self.conn._db_session.execute = MagicMock(
             return_value=FakeQueryResult()
-        )  # noqa: E501
-        result = self.conn.query("MY_TABLE")
+        )
+        result = self.conn.query_data("MY_TABLE")
         self.assertIsNotNone(result)
 
     def test_can_extract(self):
-        self.conn.query = MagicMock(return_value=FakeQueryResult())
-        data = self.conn.extract("MY_TABLE")
+        self.conn.query_data = MagicMock(return_value=mock_result)
+        data = self.conn.extract("MY_TABLE", columns=mock_columns)
         self.assertGreater(len(data), 0)
 
     def test_can_extract_and_return_other_format(self):
-        self.conn.query = MagicMock(return_value=FakeQueryResult())
-        data = self.conn.extract("MY_TABLE", return_type="other")
+        self.conn.query_data = MagicMock(return_value=mock_result)
+        data = self.conn.extract(
+            "MY_TABLE", return_type="other", columns=mock_columns
+        )
         self.assertEqual(len(data), 3)
 
     def test_can_create_connection_without_schema(self):
-        self.conn = MySQLConnector(self.user, self.password, self.host)
+        self.conn = MySQLConnector(
+            self.user, self.password, self.host, self.port
+        )
         self.assertIsNone(self.conn._schema)
 
 
@@ -176,11 +186,13 @@ class PostgresConnectorTestSuite(TestCase):
         self.assertIsNone(data)
 
     def test_can_extract(self):
-        self.conn.query_data = MagicMock(return_value=FakeQueryResult())
-        data = self.conn.extract("MY_TABLE")
+        self.conn.query_data = MagicMock(return_value=mock_result)
+        data = self.conn.extract("MY_TABLE", columns=mock_columns)
         self.assertGreater(len(data), 0)
 
     def test_can_extract_and_return_other_format(self):
-        self.conn.query_data = MagicMock(return_value=FakeQueryResult())
-        data = self.conn.extract("MY_TABLE", return_type="other")
+        self.conn.query_data = MagicMock(return_value=mock_result)
+        data = self.conn.extract(
+            "MY_TABLE", return_type="other", columns=mock_columns
+        )
         self.assertEqual(len(data), 3)

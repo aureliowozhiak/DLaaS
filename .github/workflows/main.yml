@@ -32,7 +32,7 @@ jobs:
       - name: Check for importing style
         run: poetry run isort --profile=black --check --diff tests
       - name: Look for auto format errors
-        run: poetry run black --check --diff tests
+        run: poetry run black --line-length 79 --check --diff tests
 
   tests:
     needs: lint

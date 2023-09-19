@@ -1,11 +1,13 @@
 {
-    "localhost:3306": {
+    "localhost": {
+        "port": "3306",
         "user": "root",
         "password": "root",
-        "schema": "dlaas",
+        "db_name": "dlaas",
         "tables": {
             "person": {
-                "filename": "person.json"
+                "filename": "person.json",
+                "columns": ["ID", "NAME", "AGE"]
             }
         }
     }
