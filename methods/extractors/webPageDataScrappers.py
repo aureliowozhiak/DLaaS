@@ -54,6 +54,8 @@ class WebPageDataScrappers:
     def search_text(self, search_text):
         text_content = self.html_soup_content.get_text()
         occurrences = [
-            line.strip() for line in text_content.splitlines() if search_text in line
+            line.strip()
+            for line in text_content.splitlines()
+            if search_text in line
         ]
         return occurrences
