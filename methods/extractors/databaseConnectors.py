@@ -120,3 +120,11 @@ class PostgresConnector(DatabaseConnector):
         self._connection_string = f"postgresql://{self._user}:{self._password}@{self._host}:{self._port}/{self._db_name}"  # noqa: E501
         self._engine = create_engine(self._connection_string)
         self._db_session = None
+
+
+class SqliteConnector(DatabaseConnector):
+    def __init__(self, db_path: str) -> None:
+        self._db_path = db_path
+        self._connection_string = f"sqlite:///{self._db_path}"
+        self._engine = create_engine(self._connection_string)
+        self._db_session = None
