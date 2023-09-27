@@ -30,3 +30,14 @@
 2023-09-17 15:28:15,558 - INFO: Conectando ao banco de dados host=localhost
 2023-09-17 15:28:15,590 - INFO: Processando arquivo de configuração: webscrapper.json
 2023-09-17 15:28:15,593 - INFO: Executando web scraping para a URL: https://pt.wikipedia.org/wiki/Python
+2023-09-20 09:30:21,678 - INFO: Processando arquivo de configuração: apis.json
+2023-09-20 09:30:21,688 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api/
+2023-09-20 09:30:23,285 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-20 09:30:23,294 - INFO: Conectando ao banco de dados host=localhost
+2023-09-20 09:36:08,577 - INFO: Processando arquivo de configuração: apis.json
+2023-09-20 09:36:08,582 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api/
+2023-09-20 09:36:11,945 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-09-20 09:36:11,957 - INFO: Executando web scraping para a URL: https://pt.wikipedia.org/wiki/Python
+2023-09-20 09:36:13,174 - INFO: Executando web scraping para a URL: https://dataengineer.help/knowledge/
+2023-09-20 09:36:14,314 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-09-20 09:36:14,329 - INFO: Executando web scraping para a URL: https://books.toscrape.com/index.html
