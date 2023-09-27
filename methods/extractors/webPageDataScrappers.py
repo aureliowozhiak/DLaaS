@@ -59,3 +59,11 @@ class WebPageDataScrappers:
             if search_text in line
         ]
         return occurrences
+
+    def get_page_links(self, url):
+        all_links = []
+        all_tags_a = self.get_tag_content('a')
+        for link in all_tags_a:
+            complete_link = url + link['href']
+            all_links.append(complete_link)
+        return all_links
