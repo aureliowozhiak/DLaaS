@@ -7,7 +7,7 @@
         "tables": {
             "person": {
                 "filename": "person.json",
-                "columns": ["ID", "NAME", "AGE"]
+                "columns": ["ID", "NAME"]
             }
         }
     }
