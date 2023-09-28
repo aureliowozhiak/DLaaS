@@ -156,3 +156,11 @@
 2023-09-27 21:00:43,325 - INFO: Executando web scraping para a URL: https://dataengineer.help/knowledge/
 2023-09-27 21:00:43,465 - INFO: Processando arquivo de configura��o: webscrapper_book.json
 2023-09-27 21:00:43,465 - INFO: Executando web scraping para a URL: https://books.toscrape.com/index.html
+2023-09-28 21:43:30,929 - INFO: Processando arquivo de configuração: apis.json
+2023-09-28 21:43:30,934 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api/
+2023-09-28 21:43:32,446 - INFO: Processando arquivo de configuração: mysql_sample.json
+2023-09-28 21:43:32,452 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-09-28 21:43:32,463 - INFO: Executando web scraping para a URL: https://pt.wikipedia.org/wiki/Python
+2023-09-28 21:43:33,650 - INFO: Executando web scraping para a URL: https://dataengineer.help/knowledge/
+2023-09-28 21:43:34,783 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-09-28 21:43:34,799 - INFO: Executando web scraping para a URL: https://books.toscrape.com/index.html

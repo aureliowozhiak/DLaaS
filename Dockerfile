@@ -4,6 +4,7 @@ COPY ./src /app
 
 WORKDIR /app
 
-RUN pip install -r ./requirements.txt
+RUN pip install poetry
+RUN poetry install
 
-CMD ["python", "main.py"]
+CMD ["poetry", "run", "python", "-m", "main"]

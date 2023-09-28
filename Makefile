@@ -1,6 +1,6 @@
 .PHONY: install virtualenv lint fmt test clean
 
-TARGET_FILES=methods main.py tests
+TARGET_FILES=methods main.py src tests
 
 install:
 	@echo "Installing for dev environment"
