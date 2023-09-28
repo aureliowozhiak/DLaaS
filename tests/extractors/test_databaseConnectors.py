@@ -5,7 +5,7 @@ from unittest.mock import MagicMock, patch
 
 import sqlalchemy
 
-from ..src.methods.extractors.databaseConnectors import (  # noqa: E501
+from ...src.methods.extractors.databaseConnectors import (  # noqa: E501
     MySQLConnector,
     PostgresConnector,
 )

@@ -3,7 +3,7 @@ from unittest.mock import MagicMock
 
 import requests
 
-from ..src.methods.extractors.apiRequests import ApiRequests
+from ...src.methods.extractors.apiRequests import ApiRequests
 
 
 class ApiRequestsTestSuite(TestCase):
