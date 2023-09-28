@@ -1,12 +1,12 @@
 {
     "localhost": {
-        "port": "3306",
-        "user": "root",
+        "port": "5432",
+        "user": "postgres",
         "password": "root",
         "db_name": "dlaas",
         "tables": {
             "person": {
-                "filename": "person-mysql.json",
+                "filename": "person-postgres.json",
                 "columns": ["ID", "NAME", "AGE"]
             }
         }

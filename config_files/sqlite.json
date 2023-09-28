@@ -1,0 +1,10 @@
+{
+  "dev/person.sqlite3": {
+    "tables": {
+      "person": {
+        "filename": "person-sqlite3.json",
+        "columns": ["ID", "NAME", "AGE"]
+      }
+    }
+  }
+}
