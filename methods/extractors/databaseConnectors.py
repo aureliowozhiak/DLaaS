@@ -1,12 +1,18 @@
 import json
 
-import sqlalchemy
 from sqlalchemy import create_engine, text
 from sqlalchemy.exc import OperationalError
 from sqlalchemy.orm import sessionmaker
 
 
 class DatabaseConnector:
+    def __init__(self, connection_string):
+        self._connection_string = connection_string
+        self._engine = create_engine(
+            self._connection_string, pool_recycle=3600
+        )
+        self._db_session = None
+
     def connect(self):
         try:
             Session = sessionmaker(bind=self._engine)
@@ -82,49 +88,3 @@ class DatabaseConnector:
                 return data
             except OperationalError as e:
                 print(f"Error executing query: {e}")
-
-
-class MySQLConnector(DatabaseConnector):
-    def __init__(
-        self,
-        user: str,
-        password: str,
-        port: str,
-        host: str,
-        schema: str = None,
-    ):
-        self._user = user
-        self._password = password
-        self._host = host
-        self._schema = schema
-        self._port = port
-        if self._schema is None:
-            connection_string = f"mysql+pymysql://{self._user}:{self._password}@{self._host}:{self._port}"  # noqa: E501
-        else:
-            connection_string = f"mysql+pymysql://{self._user}:{self._password}@{self._host}:{self._port}/{self._schema}"  # noqa: E501
-        self._engine = sqlalchemy.create_engine(
-            connection_string, pool_recycle=3600
-        )
-        self._db_session = None
-
-
-class PostgresConnector(DatabaseConnector):
-    def __init__(
-        self, user: str, password: str, host: str, port: str, db_name: str
-    ) -> None:
-        self._user = user
-        self._password = password
-        self._host = host
-        self._port = port
-        self._db_name = db_name
-        self._connection_string = f"postgresql://{self._user}:{self._password}@{self._host}:{self._port}/{self._db_name}"  # noqa: E501
-        self._engine = create_engine(self._connection_string)
-        self._db_session = None
-
-
-class SqliteConnector(DatabaseConnector):
-    def __init__(self, db_path: str) -> None:
-        self._db_path = db_path
-        self._connection_string = f"sqlite:///{self._db_path}"
-        self._engine = create_engine(self._connection_string)
-        self._db_session = None

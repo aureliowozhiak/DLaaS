@@ -41,3 +41,80 @@
 2023-09-20 09:36:13,174 - INFO: Executando web scraping para a URL: https://dataengineer.help/knowledge/
 2023-09-20 09:36:14,314 - INFO: Processando arquivo de configuração: webscrapper_book.json
 2023-09-20 09:36:14,329 - INFO: Executando web scraping para a URL: https://books.toscrape.com/index.html
+2023-09-21 17:34:27,506 - INFO: Processando arquivo de configuração: sqlite.json
+2023-09-21 17:34:27,506 - INFO: Conectando ao banco sqlite com path person.sqlite3
+2023-09-21 17:36:48,790 - INFO: Processando arquivo de configuração: sqlite.json
+2023-09-21 17:36:48,791 - INFO: Conectando ao banco sqlite com path person.sqlite3
+2023-09-21 17:43:19,643 - INFO: Processando arquivo de configuração: sqlite.json
+2023-09-21 17:43:19,643 - INFO: Conectando ao banco sqlite com path person.sqlite3
+2023-09-21 17:43:19,654 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-21 17:43:19,654 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-09-21 17:43:19,655 - INFO: Processando arquivo de configuração: apis.json
+2023-09-21 17:43:19,655 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-09-21 17:43:31,193 - INFO: Processando arquivo de configuração: sqlite.json
+2023-09-21 17:43:31,194 - INFO: Conectando ao banco sqlite com path person.sqlite3
+2023-09-21 17:43:31,205 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-21 17:43:31,205 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-09-21 17:43:31,205 - INFO: Processando arquivo de configuração: apis.json
+2023-09-21 17:43:31,205 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-09-21 17:43:53,189 - INFO: Processando arquivo de configuração: sqlite.json
+2023-09-21 17:43:53,189 - INFO: Conectando ao banco sqlite com path person.sqlite3
+2023-09-21 17:43:53,200 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-21 17:43:53,201 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-09-21 17:43:53,201 - INFO: Processando arquivo de configuração: apis.json
+2023-09-21 17:43:53,201 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-09-27 19:52:31,811 - INFO: Processando arquivo de configuração: sqlite.json
+2023-09-27 19:52:31,814 - INFO: Conectando ao banco sqlite com path person.sqlite3
+2023-09-27 19:52:31,837 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-09-27 19:52:31,837 - INFO: Executando web scraping para a URL: https://pt.wikipedia.org/wiki/Python
+2023-09-27 19:53:20,402 - INFO: Processando arquivo de configuração: sqlite.json
+2023-09-27 19:53:20,402 - INFO: Conectando ao banco sqlite com path person.sqlite3
+2023-09-27 19:53:20,426 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-27 19:53:20,427 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-09-27 19:53:20,427 - INFO: Processando arquivo de configuração: apis.json
+2023-09-27 19:53:20,427 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-09-27 19:54:33,553 - INFO: Processando arquivo de configuração: sqlite.json
+2023-09-27 19:54:33,554 - INFO: Conectando ao banco sqlite com path person.sqlite3
+2023-09-27 19:54:33,568 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-27 19:54:33,568 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-09-27 19:54:33,568 - INFO: Processando arquivo de configuração: apis.json
+2023-09-27 19:54:33,568 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-09-27 20:12:27,128 - INFO: Processando arquivo de configuração: sqlite.json
+2023-09-27 20:12:27,128 - INFO: Conectando ao banco sqlite com path dev/person.sqlite3
+2023-09-27 20:12:27,143 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-27 20:12:27,143 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-09-27 20:12:27,144 - INFO: Processando arquivo de configuração: apis.json
+2023-09-27 20:12:27,144 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-09-27 20:57:28,341 - INFO: Processando arquivo de configuração: sqlite.json
+2023-09-27 20:57:28,341 - INFO: Conectando ao banco sqlite com path dev/person.sqlite3
+2023-09-27 20:57:28,352 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-27 20:57:28,353 - INFO: Conectando ao banco de dados host=localhost
+2023-09-27 20:57:28,387 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-09-27 20:57:28,387 - INFO: Processando arquivo de configuração: apis.json
+2023-09-27 20:57:28,387 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-09-27 21:14:22,943 - INFO: Processando arquivo de configuração: sqlite.json
+2023-09-27 21:14:22,944 - INFO: Conectando ao banco sqlite com path dev/person.sqlite3
+2023-09-27 21:14:22,955 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-27 21:14:22,955 - INFO: Conectando ao banco de dados host=localhost
+2023-09-27 21:14:23,000 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-09-27 21:14:23,000 - INFO: Processando arquivo de configuração: apis.json
+2023-09-27 21:14:23,000 - INFO: Processando arquivo de configuração: postgres.json
+2023-09-27 21:14:23,000 - INFO: Conectando ao banco de dados host=localhost
+2023-09-27 21:18:40,093 - INFO: Processando arquivo de configuração: sqlite.json
+2023-09-27 21:18:40,093 - INFO: Conectando ao banco sqlite com path dev/person.sqlite3
+2023-09-27 21:18:40,108 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-27 21:18:40,108 - INFO: Conectando ao banco de dados host=localhost
+2023-09-27 21:18:40,142 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-09-27 21:18:40,143 - INFO: Processando arquivo de configuração: apis.json
+2023-09-27 21:18:40,143 - INFO: Processando arquivo de configuração: postgres.json
+2023-09-27 21:18:40,143 - INFO: Conectando ao banco de dados host=localhost
+2023-09-27 21:18:40,215 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-09-27 21:24:15,658 - INFO: Processando arquivo de configuração: sqlite.json
+2023-09-27 21:24:15,658 - INFO: Conectando ao banco sqlite com path dev/person.sqlite3
+2023-09-27 21:24:15,670 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-27 21:24:15,670 - INFO: Conectando ao banco de dados host=localhost
+2023-09-27 21:24:15,702 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-09-27 21:24:15,702 - INFO: Processando arquivo de configuração: apis.json
+2023-09-27 21:24:15,702 - INFO: Processando arquivo de configuração: postgres.json
+2023-09-27 21:24:15,702 - INFO: Conectando ao banco de dados host=localhost
+2023-09-27 21:24:15,781 - INFO: Processando arquivo de configuração: webscrapper_book.json

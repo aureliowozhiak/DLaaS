@@ -3,9 +3,14 @@ import logging
 import os
 
 from methods.extractors.apiRequests import ApiRequests
-from methods.extractors.databaseConnectors import MySQLConnector
+from methods.extractors.databaseConnectors import DatabaseConnector
 from methods.extractors.webPageDataScrappers import WebPageDataScrappers
 from methods.loaders.fileSavers import FileSavers
+from utils.databaseUrlBuilders import (
+    build_mysql_url,
+    build_postgres_url,
+    build_sqlite_url,
+)
 
 # Configurar o sistema de log
 log_file = "logs/init.log"
@@ -47,6 +52,29 @@ for filename in os.listdir(config_path):
                     )
                     filesaver.save_content(response, i["file_name"])
 
+            if "postgres" in filename:
+                logging.info(f"Conectando ao banco de dados host={url}")
+                host = url
+                port = v["port"]
+                user = v["user"]
+                password = v["password"]
+                db_name = v.get("db_name")  # opcional
+                connection_string = build_postgres_url(
+                    user, password, host, port, db_name
+                )
+                connector = DatabaseConnector(connection_string)
+                connector.connect()
+                for table, table_config in v["tables"].items():
+                    table_data = connector.extract(
+                        table,
+                        table_config.get("columns"),
+                        table_config.get("where"),
+                        table_config.get("limit"),
+                    )
+                    filesaver.save_content(
+                        table_data, table_config["filename"]
+                    )
+
             if "mysql" in filename:
                 logging.info(f"Conectando ao banco de dados host={url}")
                 host = url
@@ -54,13 +82,26 @@ for filename in os.listdir(config_path):
                 user = v["user"]
                 password = v["password"]
                 db_name = v.get("db_name")  # opcional
-                connector = MySQLConnector(
-                    user=user,
-                    password=password,
-                    host=host,
-                    port=port,
-                    schema=db_name,
+                connection_string = build_mysql_url(
+                    user, password, port, host, db_name
                 )
+                connector = DatabaseConnector(connection_string)
+                connector.connect()
+                for table, table_config in v["tables"].items():
+                    table_data = connector.extract(
+                        table,
+                        table_config.get("columns"),
+                        table_config.get("where"),
+                        table_config.get("limit"),
+                    )
+                    filesaver.save_content(
+                        table_data, table_config["filename"]
+                    )
+
+            if "sqlite" in filename:
+                logging.info(f"Conectando ao banco sqlite com path {url}")
+                connection_string = build_sqlite_url(url)
+                connector = DatabaseConnector(connection_string)
                 connector.connect()
                 for table, table_config in v["tables"].items():
                     table_data = connector.extract(
