@@ -1,6 +1,6 @@
-.PHONY: install virtualenv lint fmt test clean
+.PHONY: install virtualenv lint fmt test clean dev-db
 
-TARGET_FILES=methods main.py src tests
+TARGET_FILES=src tests
 
 install:
 	@echo "Installing for dev environment"
@@ -28,3 +28,7 @@ clean:
 	@rm -rf .venv  # Remove virtual environment (if needed)
 	@poetry run find . -name '__pycache__' -exec rm -r {} +  # Remove __pycache__ directories
 	@poetry run find . -name '*.pyc' -exec rm {} +  # Remove .pyc files
+
+dev-db:
+	@echo "Providing databases for development"
+	@cd dev && docker compose up

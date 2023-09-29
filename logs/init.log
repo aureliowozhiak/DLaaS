@@ -41,58 +41,58 @@
 2023-09-20 09:36:13,174 - INFO: Executando web scraping para a URL: https://dataengineer.help/knowledge/
 2023-09-20 09:36:14,314 - INFO: Processando arquivo de configuraÃ§Ã£o: webscrapper_book.json
 2023-09-20 09:36:14,329 - INFO: Executando web scraping para a URL: https://books.toscrape.com/index.html
-2023-09-27 20:31:19,010 - INFO: Processando arquivo de configuração: apis.json
-2023-09-27 20:31:19,011 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api/
-2023-09-27 20:31:20,124 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-27 20:31:19,010 - INFO: Processando arquivo de configuraï¿½ï¿½o: apis.json
+2023-09-27 20:31:19,011 - INFO: Fazendo solicitaï¿½ï¿½o API para a URL: https://www.freetogame.com/api/
+2023-09-27 20:31:20,124 - INFO: Processando arquivo de configuraï¿½ï¿½o: mysql.json
 2023-09-27 20:31:20,124 - INFO: Conectando ao banco de dados host=localhost
-2023-09-27 20:31:45,666 - INFO: Processando arquivo de configuração: apis.json
-2023-09-27 20:31:45,666 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api/
-2023-09-27 20:31:46,430 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-27 20:31:45,666 - INFO: Processando arquivo de configuraï¿½ï¿½o: apis.json
+2023-09-27 20:31:45,666 - INFO: Fazendo solicitaï¿½ï¿½o API para a URL: https://www.freetogame.com/api/
+2023-09-27 20:31:46,430 - INFO: Processando arquivo de configuraï¿½ï¿½o: mysql.json
 2023-09-27 20:31:46,431 - INFO: Conectando ao banco de dados host=localhost
-2023-09-27 20:31:56,284 - INFO: Processando arquivo de configuração: apis.json
-2023-09-27 20:31:56,284 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api/
-2023-09-27 20:31:57,101 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-27 20:31:56,284 - INFO: Processando arquivo de configuraï¿½ï¿½o: apis.json
+2023-09-27 20:31:56,284 - INFO: Fazendo solicitaï¿½ï¿½o API para a URL: https://www.freetogame.com/api/
+2023-09-27 20:31:57,101 - INFO: Processando arquivo de configuraï¿½ï¿½o: mysql.json
 2023-09-27 20:31:57,102 - INFO: Conectando ao banco de dados host=localhost
-2023-09-27 20:31:58,777 - INFO: Processando arquivo de configuração: apis.json
-2023-09-27 20:31:58,777 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api/
-2023-09-27 20:31:59,541 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-27 20:31:58,777 - INFO: Processando arquivo de configuraï¿½ï¿½o: apis.json
+2023-09-27 20:31:58,777 - INFO: Fazendo solicitaï¿½ï¿½o API para a URL: https://www.freetogame.com/api/
+2023-09-27 20:31:59,541 - INFO: Processando arquivo de configuraï¿½ï¿½o: mysql.json
 2023-09-27 20:31:59,541 - INFO: Conectando ao banco de dados host=localhost
-2023-09-27 20:32:21,434 - INFO: Processando arquivo de configuração: apis.json
-2023-09-27 20:32:21,434 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api/
-2023-09-27 20:32:22,240 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-27 20:32:21,434 - INFO: Processando arquivo de configuraï¿½ï¿½o: apis.json
+2023-09-27 20:32:21,434 - INFO: Fazendo solicitaï¿½ï¿½o API para a URL: https://www.freetogame.com/api/
+2023-09-27 20:32:22,240 - INFO: Processando arquivo de configuraï¿½ï¿½o: mysql.json
 2023-09-27 20:32:22,240 - INFO: Conectando ao banco de dados host=localhost
-2023-09-27 20:35:45,647 - INFO: Processando arquivo de configuração: apis.json
-2023-09-27 20:35:45,647 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api/
-2023-09-27 20:35:46,417 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-27 20:35:45,647 - INFO: Processando arquivo de configuraï¿½ï¿½o: apis.json
+2023-09-27 20:35:45,647 - INFO: Fazendo solicitaï¿½ï¿½o API para a URL: https://www.freetogame.com/api/
+2023-09-27 20:35:46,417 - INFO: Processando arquivo de configuraï¿½ï¿½o: mysql.json
 2023-09-27 20:35:46,417 - INFO: Conectando ao banco de dados host=localhost
-2023-09-27 20:37:16,669 - INFO: Processando arquivo de configuração: apis.json
-2023-09-27 20:37:16,670 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api/
-2023-09-27 20:37:17,444 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-27 20:37:16,669 - INFO: Processando arquivo de configuraï¿½ï¿½o: apis.json
+2023-09-27 20:37:16,670 - INFO: Fazendo solicitaï¿½ï¿½o API para a URL: https://www.freetogame.com/api/
+2023-09-27 20:37:17,444 - INFO: Processando arquivo de configuraï¿½ï¿½o: mysql.json
 2023-09-27 20:37:17,456 - INFO: Conectando ao banco de dados host=localhost
-2023-09-27 20:37:17,575 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-09-27 20:37:17,575 - INFO: Processando arquivo de configuraï¿½ï¿½o: webscrapper.json
 2023-09-27 20:37:17,575 - INFO: Executando web scraping para a URL: https://pt.wikipedia.org/wiki/Python
 2023-09-27 20:37:18,583 - INFO: Executando web scraping para a URL: https://dataengineer.help/knowledge/
-2023-09-27 20:37:19,815 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-09-27 20:37:19,815 - INFO: Processando arquivo de configuraï¿½ï¿½o: webscrapper_book.json
 2023-09-27 20:37:19,815 - INFO: Executando web scraping para a URL: https://books.toscrape.com/index.html
-2023-09-27 20:37:43,401 - INFO: Processando arquivo de configuração: apis.json
-2023-09-27 20:37:43,402 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api/
-2023-09-27 20:37:44,163 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-27 20:37:43,401 - INFO: Processando arquivo de configuraï¿½ï¿½o: apis.json
+2023-09-27 20:37:43,402 - INFO: Fazendo solicitaï¿½ï¿½o API para a URL: https://www.freetogame.com/api/
+2023-09-27 20:37:44,163 - INFO: Processando arquivo de configuraï¿½ï¿½o: mysql.json
 2023-09-27 20:37:44,164 - INFO: Conectando ao banco de dados host=localhost
-2023-09-27 20:37:44,222 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-09-27 20:37:44,222 - INFO: Processando arquivo de configuraï¿½ï¿½o: webscrapper.json
 2023-09-27 20:37:44,222 - INFO: Executando web scraping para a URL: https://pt.wikipedia.org/wiki/Python
 2023-09-27 20:37:45,110 - INFO: Executando web scraping para a URL: https://dataengineer.help/knowledge/
-2023-09-27 20:37:45,556 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-09-27 20:37:45,556 - INFO: Processando arquivo de configuraï¿½ï¿½o: webscrapper_book.json
 2023-09-27 20:37:45,556 - INFO: Executando web scraping para a URL: https://books.toscrape.com/index.html
 2023-09-27 23:38:24,758 - INFO: Processando arquivo de configuraÃ§Ã£o: apis.json
 2023-09-27 23:38:24,763 - INFO: Fazendo solicitaÃ§Ã£o API para a URL: https://www.freetogame.com/api/
 2023-09-27 23:38:25,586 - INFO: Processando arquivo de configuraÃ§Ã£o: mysql.json
 2023-09-27 23:38:25,590 - INFO: Conectando ao banco de dados host=localhost
-2023-09-27 20:40:00,686 - INFO: Processando arquivo de configuração: apis.json
-2023-09-27 20:40:00,686 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api/
-2023-09-27 20:40:01,448 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-09-27 20:40:00,686 - INFO: Processando arquivo de configuraï¿½ï¿½o: apis.json
+2023-09-27 20:40:00,686 - INFO: Fazendo solicitaï¿½ï¿½o API para a URL: https://www.freetogame.com/api/
+2023-09-27 20:40:01,448 - INFO: Processando arquivo de configuraï¿½ï¿½o: webscrapper.json
 2023-09-27 20:40:01,449 - INFO: Executando web scraping para a URL: https://pt.wikipedia.org/wiki/Python
 2023-09-27 20:40:02,354 - INFO: Executando web scraping para a URL: https://dataengineer.help/knowledge/
-2023-09-27 20:40:02,782 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-09-27 20:40:02,782 - INFO: Processando arquivo de configuraï¿½ï¿½o: webscrapper_book.json
 2023-09-27 20:40:02,782 - INFO: Executando web scraping para a URL: https://books.toscrape.com/index.html
 2023-09-27 23:40:11,331 - INFO: Processando arquivo de configuraÃ§Ã£o: apis.json
 2023-09-27 23:40:11,334 - INFO: Fazendo solicitaÃ§Ã£o API para a URL: https://www.freetogame.com/api/
@@ -116,45 +116,45 @@
 2023-09-27 23:51:48,069 - INFO: Fazendo solicitaÃ§Ã£o API para a URL: https://www.freetogame.com/api/
 2023-09-27 23:51:48,933 - INFO: Processando arquivo de configuraÃ§Ã£o: mysql.json
 2023-09-27 23:51:48,940 - INFO: Conectando ao banco de dados host=0.0.0.0
-2023-09-27 20:52:08,213 - INFO: Processando arquivo de configuração: apis.json
-2023-09-27 20:52:08,213 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api/
-2023-09-27 20:52:09,033 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-27 20:52:08,213 - INFO: Processando arquivo de configuraï¿½ï¿½o: apis.json
+2023-09-27 20:52:08,213 - INFO: Fazendo solicitaï¿½ï¿½o API para a URL: https://www.freetogame.com/api/
+2023-09-27 20:52:09,033 - INFO: Processando arquivo de configuraï¿½ï¿½o: mysql.json
 2023-09-27 20:52:09,033 - INFO: Conectando ao banco de dados host=0.0.0.0
-2023-09-27 20:52:19,084 - INFO: Processando arquivo de configuração: apis.json
-2023-09-27 20:52:19,084 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api/
-2023-09-27 20:52:19,940 - INFO: Processando arquivo de configuração: mysql.json
+2023-09-27 20:52:19,084 - INFO: Processando arquivo de configuraï¿½ï¿½o: apis.json
+2023-09-27 20:52:19,084 - INFO: Fazendo solicitaï¿½ï¿½o API para a URL: https://www.freetogame.com/api/
+2023-09-27 20:52:19,940 - INFO: Processando arquivo de configuraï¿½ï¿½o: mysql.json
 2023-09-27 20:52:19,940 - INFO: Conectando ao banco de dados host=localhost
-2023-09-27 20:52:19,998 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-09-27 20:52:19,998 - INFO: Processando arquivo de configuraï¿½ï¿½o: webscrapper.json
 2023-09-27 20:52:19,999 - INFO: Executando web scraping para a URL: https://pt.wikipedia.org/wiki/Python
 2023-09-27 20:52:27,352 - INFO: Executando web scraping para a URL: https://dataengineer.help/knowledge/
-2023-09-27 20:52:27,484 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-09-27 20:52:27,484 - INFO: Processando arquivo de configuraï¿½ï¿½o: webscrapper_book.json
 2023-09-27 20:52:27,484 - INFO: Executando web scraping para a URL: https://books.toscrape.com/index.html
-2023-09-27 20:54:12,197 - INFO: Processando arquivo de configuração: apis.json
-2023-09-27 20:54:12,197 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api/
-2023-09-27 20:54:12,990 - INFO: Processando arquivo de configuração: mysql_sample.json
-2023-09-27 20:54:12,990 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-09-27 20:54:12,197 - INFO: Processando arquivo de configuraï¿½ï¿½o: apis.json
+2023-09-27 20:54:12,197 - INFO: Fazendo solicitaï¿½ï¿½o API para a URL: https://www.freetogame.com/api/
+2023-09-27 20:54:12,990 - INFO: Processando arquivo de configuraï¿½ï¿½o: mysql_sample.json
+2023-09-27 20:54:12,990 - INFO: Processando arquivo de configuraï¿½ï¿½o: webscrapper.json
 2023-09-27 20:54:12,990 - INFO: Executando web scraping para a URL: https://pt.wikipedia.org/wiki/Python
 2023-09-27 20:54:13,940 - INFO: Executando web scraping para a URL: https://dataengineer.help/knowledge/
-2023-09-27 20:54:14,372 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-09-27 20:54:14,372 - INFO: Processando arquivo de configuraï¿½ï¿½o: webscrapper_book.json
 2023-09-27 20:54:14,372 - INFO: Executando web scraping para a URL: https://books.toscrape.com/index.html
-2023-09-27 20:59:25,234 - INFO: Processando arquivo de configuração: apis.json
-2023-09-27 20:59:25,234 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api/
-2023-09-27 20:59:25,999 - INFO: Processando arquivo de configuração: mysql.sql
-2023-09-27 21:00:31,423 - INFO: Processando arquivo de configuração: apis.json
-2023-09-27 21:00:31,423 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api/
-2023-09-27 21:00:32,194 - INFO: Processando arquivo de configuração: mysql_sample.json
-2023-09-27 21:00:32,195 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-09-27 20:59:25,234 - INFO: Processando arquivo de configuraï¿½ï¿½o: apis.json
+2023-09-27 20:59:25,234 - INFO: Fazendo solicitaï¿½ï¿½o API para a URL: https://www.freetogame.com/api/
+2023-09-27 20:59:25,999 - INFO: Processando arquivo de configuraï¿½ï¿½o: mysql.sql
+2023-09-27 21:00:31,423 - INFO: Processando arquivo de configuraï¿½ï¿½o: apis.json
+2023-09-27 21:00:31,423 - INFO: Fazendo solicitaï¿½ï¿½o API para a URL: https://www.freetogame.com/api/
+2023-09-27 21:00:32,194 - INFO: Processando arquivo de configuraï¿½ï¿½o: mysql_sample.json
+2023-09-27 21:00:32,195 - INFO: Processando arquivo de configuraï¿½ï¿½o: webscrapper.json
 2023-09-27 21:00:32,195 - INFO: Executando web scraping para a URL: https://pt.wikipedia.org/wiki/Python
 2023-09-27 21:00:33,112 - INFO: Executando web scraping para a URL: https://dataengineer.help/knowledge/
-2023-09-27 21:00:33,246 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-09-27 21:00:33,246 - INFO: Processando arquivo de configuraï¿½ï¿½o: webscrapper_book.json
 2023-09-27 21:00:33,246 - INFO: Executando web scraping para a URL: https://books.toscrape.com/index.html
-2023-09-27 21:00:41,612 - INFO: Processando arquivo de configuração: apis.json
-2023-09-27 21:00:41,613 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api/
-2023-09-27 21:00:42,376 - INFO: Processando arquivo de configuração: mysql_sample.json
-2023-09-27 21:00:42,376 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-09-27 21:00:41,612 - INFO: Processando arquivo de configuraï¿½ï¿½o: apis.json
+2023-09-27 21:00:41,613 - INFO: Fazendo solicitaï¿½ï¿½o API para a URL: https://www.freetogame.com/api/
+2023-09-27 21:00:42,376 - INFO: Processando arquivo de configuraï¿½ï¿½o: mysql_sample.json
+2023-09-27 21:00:42,376 - INFO: Processando arquivo de configuraï¿½ï¿½o: webscrapper.json
 2023-09-27 21:00:42,376 - INFO: Executando web scraping para a URL: https://pt.wikipedia.org/wiki/Python
 2023-09-27 21:00:43,325 - INFO: Executando web scraping para a URL: https://dataengineer.help/knowledge/
-2023-09-27 21:00:43,465 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-09-27 21:00:43,465 - INFO: Processando arquivo de configuraï¿½ï¿½o: webscrapper_book.json
 2023-09-27 21:00:43,465 - INFO: Executando web scraping para a URL: https://books.toscrape.com/index.html
 2023-09-28 21:43:30,929 - INFO: Processando arquivo de configuraÃ§Ã£o: apis.json
 2023-09-28 21:43:30,934 - INFO: Fazendo solicitaÃ§Ã£o API para a URL: https://www.freetogame.com/api/
@@ -172,3 +172,80 @@
 2023-09-28 21:55:01,875 - INFO: Executando web scraping para a URL: https://dataengineer.help/knowledge/
 2023-09-28 21:55:02,235 - INFO: Processando arquivo de configuraÃ§Ã£o: webscrapper_book.json
 2023-09-28 21:55:02,238 - INFO: Executando web scraping para a URL: https://books.toscrape.com/index.html
+2023-09-21 17:34:27,506 - INFO: Processando arquivo de configuraÃ§Ã£o: sqlite.json
+2023-09-21 17:34:27,506 - INFO: Conectando ao banco sqlite com path person.sqlite3
+2023-09-21 17:36:48,790 - INFO: Processando arquivo de configuraÃ§Ã£o: sqlite.json
+2023-09-21 17:36:48,791 - INFO: Conectando ao banco sqlite com path person.sqlite3
+2023-09-21 17:43:19,643 - INFO: Processando arquivo de configuraÃ§Ã£o: sqlite.json
+2023-09-21 17:43:19,643 - INFO: Conectando ao banco sqlite com path person.sqlite3
+2023-09-21 17:43:19,654 - INFO: Processando arquivo de configuraÃ§Ã£o: mysql.json
+2023-09-21 17:43:19,654 - INFO: Processando arquivo de configuraÃ§Ã£o: webscrapper.json
+2023-09-21 17:43:19,655 - INFO: Processando arquivo de configuraÃ§Ã£o: apis.json
+2023-09-21 17:43:19,655 - INFO: Processando arquivo de configuraÃ§Ã£o: webscrapper_book.json
+2023-09-21 17:43:31,193 - INFO: Processando arquivo de configuraÃ§Ã£o: sqlite.json
+2023-09-21 17:43:31,194 - INFO: Conectando ao banco sqlite com path person.sqlite3
+2023-09-21 17:43:31,205 - INFO: Processando arquivo de configuraÃ§Ã£o: mysql.json
+2023-09-21 17:43:31,205 - INFO: Processando arquivo de configuraÃ§Ã£o: webscrapper.json
+2023-09-21 17:43:31,205 - INFO: Processando arquivo de configuraÃ§Ã£o: apis.json
+2023-09-21 17:43:31,205 - INFO: Processando arquivo de configuraÃ§Ã£o: webscrapper_book.json
+2023-09-21 17:43:53,189 - INFO: Processando arquivo de configuraÃ§Ã£o: sqlite.json
+2023-09-21 17:43:53,189 - INFO: Conectando ao banco sqlite com path person.sqlite3
+2023-09-21 17:43:53,200 - INFO: Processando arquivo de configuraÃ§Ã£o: mysql.json
+2023-09-21 17:43:53,201 - INFO: Processando arquivo de configuraÃ§Ã£o: webscrapper.json
+2023-09-21 17:43:53,201 - INFO: Processando arquivo de configuraÃ§Ã£o: apis.json
+2023-09-21 17:43:53,201 - INFO: Processando arquivo de configuraÃ§Ã£o: webscrapper_book.json
+2023-09-27 19:52:31,811 - INFO: Processando arquivo de configuraÃ§Ã£o: sqlite.json
+2023-09-27 19:52:31,814 - INFO: Conectando ao banco sqlite com path person.sqlite3
+2023-09-27 19:52:31,837 - INFO: Processando arquivo de configuraÃ§Ã£o: webscrapper.json
+2023-09-27 19:52:31,837 - INFO: Executando web scraping para a URL: https://pt.wikipedia.org/wiki/Python
+2023-09-27 19:53:20,402 - INFO: Processando arquivo de configuraÃ§Ã£o: sqlite.json
+2023-09-27 19:53:20,402 - INFO: Conectando ao banco sqlite com path person.sqlite3
+2023-09-27 19:53:20,426 - INFO: Processando arquivo de configuraÃ§Ã£o: mysql.json
+2023-09-27 19:53:20,427 - INFO: Processando arquivo de configuraÃ§Ã£o: webscrapper.json
+2023-09-27 19:53:20,427 - INFO: Processando arquivo de configuraÃ§Ã£o: apis.json
+2023-09-27 19:53:20,427 - INFO: Processando arquivo de configuraÃ§Ã£o: webscrapper_book.json
+2023-09-27 19:54:33,553 - INFO: Processando arquivo de configuraÃ§Ã£o: sqlite.json
+2023-09-27 19:54:33,554 - INFO: Conectando ao banco sqlite com path person.sqlite3
+2023-09-27 19:54:33,568 - INFO: Processando arquivo de configuraÃ§Ã£o: mysql.json
+2023-09-27 19:54:33,568 - INFO: Processando arquivo de configuraÃ§Ã£o: webscrapper.json
+2023-09-27 19:54:33,568 - INFO: Processando arquivo de configuraÃ§Ã£o: apis.json
+2023-09-27 19:54:33,568 - INFO: Processando arquivo de configuraÃ§Ã£o: webscrapper_book.json
+2023-09-27 20:12:27,128 - INFO: Processando arquivo de configuraÃ§Ã£o: sqlite.json
+2023-09-27 20:12:27,128 - INFO: Conectando ao banco sqlite com path dev/person.sqlite3
+2023-09-27 20:12:27,143 - INFO: Processando arquivo de configuraÃ§Ã£o: mysql.json
+2023-09-27 20:12:27,143 - INFO: Processando arquivo de configuraÃ§Ã£o: webscrapper.json
+2023-09-27 20:12:27,144 - INFO: Processando arquivo de configuraÃ§Ã£o: apis.json
+2023-09-27 20:12:27,144 - INFO: Processando arquivo de configuraÃ§Ã£o: webscrapper_book.json
+2023-09-27 20:57:28,341 - INFO: Processando arquivo de configuraÃ§Ã£o: sqlite.json
+2023-09-27 20:57:28,341 - INFO: Conectando ao banco sqlite com path dev/person.sqlite3
+2023-09-27 20:57:28,352 - INFO: Processando arquivo de configuraÃ§Ã£o: mysql.json
+2023-09-27 20:57:28,353 - INFO: Conectando ao banco de dados host=localhost
+2023-09-27 20:57:28,387 - INFO: Processando arquivo de configuraÃ§Ã£o: webscrapper.json
+2023-09-27 20:57:28,387 - INFO: Processando arquivo de configuraÃ§Ã£o: apis.json
+2023-09-27 20:57:28,387 - INFO: Processando arquivo de configuraÃ§Ã£o: webscrapper_book.json
+2023-09-27 21:14:22,943 - INFO: Processando arquivo de configuraÃ§Ã£o: sqlite.json
+2023-09-27 21:14:22,944 - INFO: Conectando ao banco sqlite com path dev/person.sqlite3
+2023-09-27 21:14:22,955 - INFO: Processando arquivo de configuraÃ§Ã£o: mysql.json
+2023-09-27 21:14:22,955 - INFO: Conectando ao banco de dados host=localhost
+2023-09-27 21:14:23,000 - INFO: Processando arquivo de configuraÃ§Ã£o: webscrapper.json
+2023-09-27 21:14:23,000 - INFO: Processando arquivo de configuraÃ§Ã£o: apis.json
+2023-09-27 21:14:23,000 - INFO: Processando arquivo de configuraÃ§Ã£o: postgres.json
+2023-09-27 21:14:23,000 - INFO: Conectando ao banco de dados host=localhost
+2023-09-27 21:18:40,093 - INFO: Processando arquivo de configuraÃ§Ã£o: sqlite.json
+2023-09-27 21:18:40,093 - INFO: Conectando ao banco sqlite com path dev/person.sqlite3
+2023-09-27 21:18:40,108 - INFO: Processando arquivo de configuraÃ§Ã£o: mysql.json
+2023-09-27 21:18:40,108 - INFO: Conectando ao banco de dados host=localhost
+2023-09-27 21:18:40,142 - INFO: Processando arquivo de configuraÃ§Ã£o: webscrapper.json
+2023-09-27 21:18:40,143 - INFO: Processando arquivo de configuraÃ§Ã£o: apis.json
+2023-09-27 21:18:40,143 - INFO: Processando arquivo de configuraÃ§Ã£o: postgres.json
+2023-09-27 21:18:40,143 - INFO: Conectando ao banco de dados host=localhost
+2023-09-27 21:18:40,215 - INFO: Processando arquivo de configuraÃ§Ã£o: webscrapper_book.json
+2023-09-27 21:24:15,658 - INFO: Processando arquivo de configuraÃ§Ã£o: sqlite.json
+2023-09-27 21:24:15,658 - INFO: Conectando ao banco sqlite com path dev/person.sqlite3
+2023-09-27 21:24:15,670 - INFO: Processando arquivo de configuraÃ§Ã£o: mysql.json
+2023-09-27 21:24:15,670 - INFO: Conectando ao banco de dados host=localhost
+2023-09-27 21:24:15,702 - INFO: Processando arquivo de configuraÃ§Ã£o: webscrapper.json
+2023-09-27 21:24:15,702 - INFO: Processando arquivo de configuraÃ§Ã£o: apis.json
+2023-09-27 21:24:15,702 - INFO: Processando arquivo de configuraÃ§Ã£o: postgres.json
+2023-09-27 21:24:15,702 - INFO: Conectando ao banco de dados host=localhost
+2023-09-27 21:24:15,781 - INFO: Processando arquivo de configuraÃ§Ã£o: webscrapper_book.json
