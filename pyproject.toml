@@ -11,7 +11,7 @@ requests = "^2.31.0"
 pandas = "^2.1.0"
 beautifulsoup4 = "^4.12.2"
 sqlalchemy = "^2.0.20"
-pymysql = "^1.1.0"
+pymysql = {extras = ["rsa"], version = "^1.1.0"}
 psycopg2-binary = "^2.9.7"
 
 

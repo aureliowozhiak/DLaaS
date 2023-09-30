@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from ...utils.databaseUrlBuilders import (
+from ...src.utils.databaseUrlBuilders import (
     build_mysql_url,
     build_postgres_url,
     build_sqlite_url,

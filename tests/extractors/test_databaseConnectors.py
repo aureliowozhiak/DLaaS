@@ -5,7 +5,7 @@ from unittest.mock import MagicMock, patch
 
 import sqlalchemy
 
-from ...methods.extractors.databaseConnectors import DatabaseConnector
+from ...src.methods.extractors.databaseConnectors import DatabaseConnector
 
 mock_columns = ["COL1", "COL2", "COL3"]
 

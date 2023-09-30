@@ -1,0 +1,8 @@
+
+services:
+  dlaas:
+    build: .
+    volumes:
+      - ./config_files:/app/config_files
+      - ./output:/app/output
+      - ./logs:/app/logs

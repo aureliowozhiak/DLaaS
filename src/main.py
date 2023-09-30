@@ -13,9 +13,9 @@ from utils.databaseUrlBuilders import (
 )
 
 # Configurar o sistema de log
-log_file = "logs/init.log"
+LOG_FILE = "logs/init.log"
 logging.basicConfig(
-    filename=log_file,
+    filename=LOG_FILE,
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s: %(message)s",
 )
@@ -25,7 +25,7 @@ filesaver = FileSavers()
 
 for filename in os.listdir(config_path):
     full_path = os.path.join(config_path, filename)
-    if os.path.isfile(full_path):
+    if os.path.isfile(full_path) and filename.endswith(".json"):
         logging.info(f"Processando arquivo de configuração: {filename}")
         with open(full_path, "r") as file:
             config_file = json.load(file)

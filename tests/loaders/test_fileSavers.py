@@ -1,7 +1,7 @@
 from unittest import TestCase
 from unittest.mock import mock_open, patch
 
-from ...methods.loaders.fileSavers import FileSavers
+from ...src.methods.loaders.fileSavers import FileSavers
 
 
 class FileSaversTestSuite(TestCase):
