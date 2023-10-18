@@ -1,12 +1,27 @@
 {
-    "https://www.freetogame.com/api/":[
+    "https://www.freetogame.com/api":[
         {
             "api_headers":"",
             "endpoint_path":"games",
-            "file_name":"freetogame_api.json"
+            "file_name":"freetogame_api.json",
+            "page":""
+         }
+        ],
+
+    "https://api.github.com/repositories/1300192":[
+        {
+            "api_headers":"",
+            "endpoint_path":"issues",
+            "file_name":"api_github.json",
+            "page":
+                {
+                    "page_start": 1,
+                    "page_step":1,
+                    "page_end": 10
+                }
             
          }
-        ]
+    ]
 
 }
 
