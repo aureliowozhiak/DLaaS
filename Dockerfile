@@ -1,6 +1,7 @@
 FROM python:3.11
 
 COPY ./src /app
+COPY pyproject.toml poetry.lock* /app/
 
 WORKDIR /app
 
