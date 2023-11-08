@@ -1,0 +1,141 @@
+2023-10-18 18:27:40,126 - INFO: Processando arquivo de configuração: apis.json
+2023-10-18 18:27:40,134 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api/
+2023-10-18 18:28:19,517 - INFO: Processando arquivo de configuração: apis.json
+2023-10-18 18:28:19,522 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api/
+2023-10-18 18:28:20,836 - INFO: Fazendo solicitação API para a URL: https://api.github.com/repositories/
+2023-10-18 18:28:21,318 - INFO: Processando arquivo de configuração: mysql_sample.json
+2023-10-18 18:28:21,334 - INFO: Processando arquivo de configuração: postgres.json
+2023-10-18 18:28:21,342 - INFO: Processando arquivo de configuração: sqlite.json
+2023-10-18 18:28:21,355 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-10-18 18:28:21,371 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-10-18 18:28:58,829 - INFO: Processando arquivo de configuração: apis.json
+2023-10-18 18:28:58,835 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api/
+2023-10-18 18:28:59,801 - INFO: Fazendo solicitação API para a URL: https://api.github.com/repositories/1300192/
+2023-10-18 18:29:00,237 - INFO: Processando arquivo de configuração: mysql_sample.json
+2023-10-18 18:29:00,245 - INFO: Processando arquivo de configuração: postgres.json
+2023-10-18 18:29:00,252 - INFO: Processando arquivo de configuração: sqlite.json
+2023-10-18 18:29:00,258 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-10-18 18:29:00,265 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-10-18 18:30:09,917 - INFO: Processando arquivo de configuração: apis.json
+2023-10-18 18:30:09,923 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api/
+2023-10-18 18:30:11,017 - INFO: Fazendo solicitação API para a URL: https://api.github.com/repositories/1300192/
+2023-10-18 18:30:11,526 - INFO: Processando arquivo de configuração: mysql_sample.json
+2023-10-18 18:30:11,535 - INFO: Processando arquivo de configuração: postgres.json
+2023-10-18 18:30:11,543 - INFO: Processando arquivo de configuração: sqlite.json
+2023-10-18 18:30:11,549 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-10-18 18:30:11,556 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-10-18 18:30:58,436 - INFO: Processando arquivo de configuração: apis.json
+2023-10-18 18:30:58,440 - INFO: Fazendo solicitação API para a URL: https://api.github.com/repositories/1300192/
+2023-10-18 18:30:58,872 - INFO: Processando arquivo de configuração: mysql_sample.json
+2023-10-18 18:30:58,879 - INFO: Processando arquivo de configuração: postgres.json
+2023-10-18 18:30:58,886 - INFO: Processando arquivo de configuração: sqlite.json
+2023-10-18 18:30:58,893 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-10-18 18:30:58,900 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-10-18 18:31:15,469 - INFO: Processando arquivo de configuração: apis.json
+2023-10-18 18:31:15,473 - INFO: Fazendo solicitação API para a URL: https://api.github.com/repositories/1300192/
+2023-10-18 18:31:15,757 - INFO: Processando arquivo de configuração: mysql_sample.json
+2023-10-18 18:31:15,766 - INFO: Processando arquivo de configuração: postgres.json
+2023-10-18 18:31:15,772 - INFO: Processando arquivo de configuração: sqlite.json
+2023-10-18 18:31:15,778 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-10-18 18:31:15,784 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-10-18 18:33:05,819 - INFO: Processando arquivo de configuração: apis.json
+2023-10-18 18:33:05,824 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api/
+2023-10-18 18:33:06,780 - INFO: Fazendo solicitação API para a URL: https://api.github.com/repositories/1300192/issues?page=2
+2023-10-18 18:33:07,496 - INFO: Processando arquivo de configuração: mysql_sample.json
+2023-10-18 18:33:07,504 - INFO: Processando arquivo de configuração: postgres.json
+2023-10-18 18:33:07,513 - INFO: Processando arquivo de configuração: sqlite.json
+2023-10-18 18:33:07,520 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-10-18 18:33:07,527 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-10-18 18:34:45,813 - INFO: Processando arquivo de configuração: apis.json
+2023-10-18 18:34:45,819 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api/
+2023-10-18 18:34:46,766 - INFO: Fazendo solicitação API para a URL: https://api.github.com/repositories/1300192/
+2023-10-18 18:34:47,235 - INFO: Processando arquivo de configuração: mysql_sample.json
+2023-10-18 18:34:47,244 - INFO: Processando arquivo de configuração: postgres.json
+2023-10-18 18:34:47,253 - INFO: Processando arquivo de configuração: sqlite.json
+2023-10-18 18:34:47,259 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-10-18 18:34:47,267 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-10-18 18:35:13,989 - INFO: Processando arquivo de configuração: apis.json
+2023-10-18 18:35:13,993 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api/
+2023-10-18 18:35:15,027 - INFO: Fazendo solicitação API para a URL: https://api.github.com/repositories/1300192/
+2023-10-18 18:35:15,451 - INFO: Processando arquivo de configuração: mysql_sample.json
+2023-10-18 18:35:15,456 - INFO: Processando arquivo de configuração: postgres.json
+2023-10-18 18:35:15,463 - INFO: Processando arquivo de configuração: sqlite.json
+2023-10-18 18:35:15,470 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-10-18 18:35:15,480 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-10-18 18:35:34,577 - INFO: Processando arquivo de configuração: apis.json
+2023-10-18 18:35:34,583 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api
+2023-10-18 18:35:35,843 - INFO: Fazendo solicitação API para a URL: https://api.github.com/repositories/1300192
+2023-10-18 18:35:36,462 - INFO: Processando arquivo de configuração: mysql_sample.json
+2023-10-18 18:35:36,471 - INFO: Processando arquivo de configuração: postgres.json
+2023-10-18 18:35:36,479 - INFO: Processando arquivo de configuração: sqlite.json
+2023-10-18 18:35:36,487 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-10-18 18:35:36,497 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-10-18 18:46:19,754 - INFO: Processando arquivo de configuração: apis.json
+2023-10-18 18:46:19,759 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api
+2023-10-18 18:47:50,739 - INFO: Processando arquivo de configuração: apis.json
+2023-10-18 18:47:50,744 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api
+2023-10-18 18:49:47,635 - INFO: Processando arquivo de configuração: apis.json
+2023-10-18 18:49:47,641 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api
+2023-10-18 18:50:26,356 - INFO: Processando arquivo de configuração: apis.json
+2023-10-18 18:50:26,362 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api
+2023-10-18 18:50:38,105 - INFO: Processando arquivo de configuração: apis.json
+2023-10-18 18:50:38,109 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api
+2023-10-18 18:50:39,017 - INFO: Fazendo solicitação API para a URL: https://api.github.com/repositories/1300192
+2023-10-18 18:51:29,658 - INFO: Processando arquivo de configuração: apis.json
+2023-10-18 18:51:29,663 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api
+2023-10-18 18:51:30,642 - INFO: Fazendo solicitação API para a URL: https://api.github.com/repositories/1300192
+2023-10-18 18:52:18,152 - INFO: Processando arquivo de configuração: apis.json
+2023-10-18 18:52:18,156 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api
+2023-10-18 18:52:19,128 - INFO: Fazendo solicitação API para a URL: https://api.github.com/repositories/1300192
+2023-10-18 18:52:40,794 - INFO: Processando arquivo de configuração: apis.json
+2023-10-18 18:52:40,800 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api
+2023-10-18 18:52:41,735 - INFO: Fazendo solicitação API para a URL: https://api.github.com/repositories/1300192
+2023-10-18 18:53:00,587 - INFO: Processando arquivo de configuração: apis.json
+2023-10-18 18:53:00,591 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api
+2023-10-18 18:53:01,507 - INFO: Fazendo solicitação API para a URL: https://api.github.com/repositories/1300192
+2023-10-18 18:53:43,843 - INFO: Processando arquivo de configuração: apis.json
+2023-10-18 18:53:43,851 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api
+2023-10-18 18:53:44,815 - INFO: Fazendo solicitação API para a URL: https://api.github.com/repositories/1300192
+2023-10-18 18:56:21,509 - INFO: Processando arquivo de configuração: apis.json
+2023-10-18 18:56:21,514 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api
+2023-10-18 18:56:22,481 - INFO: Fazendo solicitação API para a URL: https://api.github.com/repositories/1300192
+2023-10-18 18:57:28,339 - INFO: Processando arquivo de configuração: apis.json
+2023-10-18 18:57:28,346 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api
+2023-10-18 18:57:29,306 - INFO: Fazendo solicitação API para a URL: https://api.github.com/repositories/1300192
+2023-10-18 18:58:01,613 - INFO: Processando arquivo de configuração: apis.json
+2023-10-18 18:58:01,618 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api
+2023-10-18 18:58:02,569 - INFO: Fazendo solicitação API para a URL: https://api.github.com/repositories/1300192
+2023-10-18 19:00:52,820 - INFO: Processando arquivo de configuração: apis.json
+2023-10-18 19:00:52,824 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api
+2023-10-18 19:01:07,875 - INFO: Processando arquivo de configuração: apis.json
+2023-10-18 19:01:07,880 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api
+2023-10-18 19:01:08,917 - INFO: Fazendo solicitação API para a URL: https://api.github.com/repositories/1300192
+2023-10-18 19:01:09,555 - INFO: Processando arquivo de configuração: mysql_sample.json
+2023-10-18 19:01:09,561 - INFO: Processando arquivo de configuração: postgres.json
+2023-10-18 19:01:09,568 - INFO: Processando arquivo de configuração: sqlite.json
+2023-10-18 19:01:09,574 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-10-18 19:01:09,582 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-10-18 19:02:40,303 - INFO: Processando arquivo de configuração: apis.json
+2023-10-18 19:02:40,309 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api
+2023-10-18 19:02:41,353 - INFO: Fazendo solicitação API para a URL: https://api.github.com/repositories/1300192
+2023-10-18 19:02:42,056 - INFO: Processando arquivo de configuração: mysql_sample.json
+2023-10-18 19:02:42,065 - INFO: Processando arquivo de configuração: postgres.json
+2023-10-18 19:02:42,075 - INFO: Processando arquivo de configuração: sqlite.json
+2023-10-18 19:02:42,084 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-10-18 19:02:42,093 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-10-18 19:03:05,544 - INFO: Processando arquivo de configuração: apis.json
+2023-10-18 19:03:05,550 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api
+2023-10-18 19:03:06,583 - INFO: Fazendo solicitação API para a URL: https://api.github.com/repositories/1300192
+2023-10-18 19:03:08,596 - INFO: Processando arquivo de configuração: mysql_sample.json
+2023-10-18 19:03:08,603 - INFO: Processando arquivo de configuração: postgres.json
+2023-10-18 19:03:08,611 - INFO: Processando arquivo de configuração: sqlite.json
+2023-10-18 19:03:08,619 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-10-18 19:03:08,627 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-10-18 19:03:49,923 - INFO: Processando arquivo de configuração: apis.json
+2023-10-18 19:03:49,927 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api
+2023-10-18 19:03:50,920 - INFO: Fazendo solicitação API para a URL: https://api.github.com/repositories/1300192
+2023-10-18 19:03:57,475 - INFO: Processando arquivo de configuração: mysql_sample.json
+2023-10-18 19:03:57,482 - INFO: Processando arquivo de configuração: postgres.json
+2023-10-18 19:03:57,491 - INFO: Processando arquivo de configuração: sqlite.json
+2023-10-18 19:03:57,497 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-10-18 19:03:57,504 - INFO: Processando arquivo de configuração: webscrapper_book.json

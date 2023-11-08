@@ -20,7 +20,7 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s: %(message)s",
 )
 
-config_path = "config_files"
+config_path = "../config_files"
 filesaver = FileSavers()
 
 for filename in os.listdir(config_path):
@@ -45,11 +45,12 @@ for filename in os.listdir(config_path):
             if "api" in filename:
                 logging.info(f"Fazendo solicitação API para a URL: {url}")
                 for i in v:
-                    response = json.dumps(
+                    page = i["page"] if i["page"] != "" else None
+                    response = str(
                         ApiRequests(url, headers=i["api_headers"])
-                        .make_request(i["endpoint_path"])
-                        .json()
-                    )
+                        .make_full_request(i["endpoint_path"],
+                                           pagination=page)
+                            )
                     filesaver.save_content(response, i["file_name"])
 
             if "postgres" in filename:
