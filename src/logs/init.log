@@ -139,3 +139,93 @@
 2023-10-18 19:03:57,491 - INFO: Processando arquivo de configuração: sqlite.json
 2023-10-18 19:03:57,497 - INFO: Processando arquivo de configuração: webscrapper.json
 2023-10-18 19:03:57,504 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-11-21 14:46:51,811 - INFO: Processando arquivo de configuração: apis.json
+2023-11-21 14:46:51,814 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api
+2023-11-21 14:46:52,603 - INFO: Fazendo solicitação API para a URL: https://api.github.com/repositories/1300192
+2023-11-21 14:46:57,023 - INFO: Processando arquivo de configuração: mysql_sample.json
+2023-11-21 14:46:57,027 - INFO: Conectando ao banco de dados host=localhost
+2023-11-21 14:50:17,752 - INFO: Processando arquivo de configuração: apis.json
+2023-11-21 14:50:17,755 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api
+2023-11-21 14:50:18,547 - INFO: Fazendo solicitação API para a URL: https://api.github.com/repositories/1300192
+2023-11-21 14:50:22,908 - INFO: Processando arquivo de configuração: mysql_sample.json
+2023-11-21 14:50:22,912 - INFO: Conectando ao banco de dados host=localhost
+2023-11-21 14:50:22,935 - ERROR: Erro ao conectar ao banco de dados: 'NoneType' object is not iterable
+2023-11-21 14:50:22,937 - INFO: Processando arquivo de configuração: postgres.json
+2023-11-21 14:50:22,941 - INFO: Conectando ao banco de dados host=localhost
+2023-11-21 14:50:23,053 - ERROR: Erro ao conectar ao banco de dados: 'NoneType' object is not iterable
+2023-11-21 14:50:23,055 - INFO: Processando arquivo de configuração: sqlite.json
+2023-11-21 14:50:23,058 - INFO: Conectando ao banco sqlite com path dev/person.sqlite3
+2023-11-21 14:50:23,083 - ERROR: Erro ao conectar ao banco de dados: 'NoneType' object is not iterable
+2023-11-21 14:50:23,085 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-11-21 14:50:23,087 - INFO: Executando web scraping para a URL: https://pt.wikipedia.org/wiki/Python
+2023-11-21 14:50:24,047 - INFO: Executando web scraping para a URL: https://dataengineer.help/knowledge/
+2023-11-21 14:50:24,161 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-11-21 14:50:24,164 - INFO: Executando web scraping para a URL: https://books.toscrape.com/index.html
+2023-11-21 14:51:10,560 - INFO: Processando arquivo de configuração: apis.json
+2023-11-21 14:51:10,563 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api
+2023-11-21 14:51:11,349 - INFO: Fazendo solicitação API para a URL: https://api.github.com/repositories/1300192
+2023-11-21 14:51:15,720 - INFO: Processando arquivo de configuração: mysql_sample.json
+2023-11-21 14:51:15,722 - INFO: Conectando ao banco de dados host=localhost
+2023-11-21 14:51:15,746 - ERROR: Erro ao conectar ao banco de dados: 'NoneType' object is not iterable
+2023-11-21 14:51:15,748 - INFO: Processando arquivo de configuração: postgres.json
+2023-11-21 14:51:15,751 - INFO: Conectando ao banco de dados host=localhost
+2023-11-21 14:51:15,822 - ERROR: Erro ao conectar ao banco de dados: 'NoneType' object is not iterable
+2023-11-21 14:51:15,824 - INFO: Processando arquivo de configuração: sqlite.json
+2023-11-21 14:51:15,826 - INFO: Conectando ao banco sqlite com path dev/person.sqlite3
+2023-11-21 14:51:15,834 - ERROR: Erro ao conectar ao banco de dados: 'NoneType' object is not iterable
+2023-11-21 14:51:15,835 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-11-21 14:51:15,837 - INFO: Executando web scraping para a URL: https://pt.wikipedia.org/wiki/Python
+2023-11-21 14:51:16,751 - INFO: Executando web scraping para a URL: https://dataengineer.help/knowledge/
+2023-11-21 14:51:16,866 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-11-21 14:51:16,868 - INFO: Executando web scraping para a URL: https://books.toscrape.com/index.html
+2023-11-21 14:51:37,462 - INFO: Processando arquivo de configuração: apis.json
+2023-11-21 14:51:37,464 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api
+2023-11-21 14:51:38,208 - INFO: Fazendo solicitação API para a URL: https://api.github.com/repositories/1300192
+2023-11-21 14:51:42,470 - INFO: Processando arquivo de configuração: mysql_sample.json
+2023-11-21 14:51:42,473 - INFO: Conectando ao banco de dados host=localhost
+2023-11-21 14:51:42,494 - ERROR: Erro ao conectar ao banco de dados: 'NoneType' object is not iterable
+2023-11-21 14:51:42,496 - INFO: Processando arquivo de configuração: postgres.json
+2023-11-21 14:51:42,498 - INFO: Conectando ao banco de dados host=localhost
+2023-11-21 14:51:42,556 - ERROR: Erro ao conectar ao banco de dados: 'NoneType' object is not iterable
+2023-11-21 14:51:42,558 - INFO: Processando arquivo de configuração: sqlite.json
+2023-11-21 14:51:42,560 - INFO: Conectando ao banco sqlite com path dev/person.sqlite3
+2023-11-21 14:51:42,568 - ERROR: Erro ao conectar ao banco de dados: 'NoneType' object is not iterable
+2023-11-21 14:51:42,569 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-11-21 14:51:42,571 - INFO: Executando web scraping para a URL: https://pt.wikipedia.org/wiki/Python
+2023-11-21 14:51:43,526 - INFO: Executando web scraping para a URL: https://dataengineer.help/knowledge/
+2023-11-21 14:51:43,646 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-11-21 14:51:43,648 - INFO: Executando web scraping para a URL: https://books.toscrape.com/index.html
+2023-11-21 14:52:13,150 - INFO: Processando arquivo de configuração: apis.json
+2023-11-21 14:52:13,152 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api
+2023-11-21 14:52:13,904 - INFO: Fazendo solicitação API para a URL: https://api.github.com/repositories/1300192
+2023-11-21 14:52:16,869 - INFO: Processando arquivo de configuração: mysql_sample.json
+2023-11-21 14:52:16,871 - INFO: Conectando ao banco de dados host=localhost
+2023-11-21 14:52:16,895 - ERROR: Erro ao conectar ao banco de dados: 'NoneType' object is not iterable
+2023-11-21 14:52:16,896 - INFO: Processando arquivo de configuração: postgres.json
+2023-11-21 14:52:16,900 - INFO: Conectando ao banco de dados host=localhost
+2023-11-21 14:52:16,974 - ERROR: Erro ao conectar ao banco de dados: 'NoneType' object is not iterable
+2023-11-21 14:52:16,976 - INFO: Processando arquivo de configuração: sqlite.json
+2023-11-21 14:52:16,979 - INFO: Conectando ao banco sqlite com path dev/person.sqlite3
+2023-11-21 14:52:16,986 - ERROR: Erro ao conectar ao banco de dados: 'NoneType' object is not iterable
+2023-11-21 14:52:16,988 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-11-21 14:52:16,990 - INFO: Executando web scraping para a URL: https://pt.wikipedia.org/wiki/Python
+2023-11-21 14:52:17,918 - INFO: Executando web scraping para a URL: https://dataengineer.help/knowledge/
+2023-11-21 14:52:18,028 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-11-21 14:52:18,030 - INFO: Executando web scraping para a URL: https://books.toscrape.com/index.html
+2023-11-21 14:55:38,965 - INFO: Processando arquivo de configuração: apis.json
+2023-11-21 14:55:38,968 - INFO: Fazendo solicitação API para a URL: https://www.freetogame.com/api
+2023-11-21 14:55:39,770 - INFO: Fazendo solicitação API para a URL: https://api.github.com/repositories/1300192
+2023-11-21 14:55:40,841 - INFO: Processando arquivo de configuração: mysql_sample.json
+2023-11-21 14:55:40,844 - INFO: Conectando ao banco de dados host=localhost
+2023-11-21 14:55:40,868 - ERROR: Erro ao conectar no db: 'NoneType' object is not iterable
+2023-11-21 14:55:40,869 - INFO: Processando arquivo de configuração: postgres.json
+2023-11-21 14:55:40,872 - INFO: Conectando ao banco de dados host=localhost
+2023-11-21 14:55:40,949 - ERROR: Erro ao conectar no db: 'NoneType' object is not iterable
+2023-11-21 14:55:40,951 - INFO: Processando arquivo de configuração: sqlite.json
+2023-11-21 14:55:40,954 - INFO: Conectando ao banco sqlite com path dev/person.sqlite3
+2023-11-21 14:55:40,961 - ERROR: Erro ao conectar no db: 'NoneType' object is not iterable
+2023-11-21 14:55:40,963 - INFO: Processando arquivo de configuração: webscrapper.json
+2023-11-21 14:55:40,966 - INFO: Executando web scraping para a URL: https://pt.wikipedia.org/wiki/Python
+2023-11-21 14:55:41,885 - INFO: Executando web scraping para a URL: https://dataengineer.help/knowledge/
+2023-11-21 14:55:42,080 - INFO: Processando arquivo de configuração: webscrapper_book.json
+2023-11-21 14:55:42,083 - INFO: Executando web scraping para a URL: https://books.toscrape.com/index.html
