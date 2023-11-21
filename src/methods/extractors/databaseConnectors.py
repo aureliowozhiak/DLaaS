@@ -51,7 +51,7 @@ class DatabaseConnector:
         if limit is not None:
             query_string += f" LIMIT {limit}"
         return query_string
-    
+
     def extract(
         self,
         table: str,
