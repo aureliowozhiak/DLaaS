@@ -38,7 +38,7 @@ class DatabaseConnector:
         else:
             raise Exception("Invalid query")
 
-    def build_query_string( 
+    def build_query_string(
         table: str, columns: list = None, where: str = None, limit: int = None
     ):
         if columns is None or columns == []:
@@ -51,7 +51,7 @@ class DatabaseConnector:
         if limit is not None:
             query_string += f" LIMIT {limit}"
         return query_string
-
+     
     def extract(
         self,
         table: str,
