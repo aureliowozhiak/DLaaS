@@ -39,7 +39,8 @@ class DatabaseConnector:
         else:
             raise Exception("Invalid query")
 
-    def build_query_string( table: str, columns: list = None, where: str = None, limit: int = None
+    def build_query_string( 
+        table: str, columns: list = None, where: str = None, limit: int = None
     ):
         if columns is None or columns == []:
             select_columns = "*"
