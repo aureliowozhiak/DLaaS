@@ -28,7 +28,6 @@ class DatabaseConnector:
         else:
             print("Not connected to any database")
 
-    @staticmethod
     def sanitize_query(query: str):
         # TODO: Melhorar a função de sanitização para evitar SQL injections
         query = query.lower().strip()
