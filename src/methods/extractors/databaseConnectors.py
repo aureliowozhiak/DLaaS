@@ -9,7 +9,7 @@ class DatabaseConnector:
     def __init__(self, connection_string):
         self._connection_string = connection_string
         self._engine = create_engine(
-        self._connection_string, pool_recycle=3600
+            self._connection_string, pool_recycle=3600
         )
         self._db_session = None
 
@@ -39,11 +39,7 @@ class DatabaseConnector:
         else:
             raise Exception("Invalid query")
 
-    def build_query_string(
-        table: str, 
-        columns: list = None, 
-        where: str = None, 
-        limit: int = None
+    def build_query_string( table: str, columns: list = None, where: str = None, limit: int = None
     ):
         if columns is None or columns == []:
             select_columns = "*"
