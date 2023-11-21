@@ -48,9 +48,8 @@ for filename in os.listdir(config_path):
                     page = i["page"] if i["page"] != "" else None
                     response = str(
                         ApiRequests(url, headers=i["api_headers"])
-                        .make_full_request(i["endpoint_path"],
-                                           pagination=page)
-                            )
+                        .make_full_request(i["endpoint_path"], pagination=page)
+                    )
                     filesaver.save_content(response, i["file_name"])
 
             if "postgres" in filename:
@@ -63,18 +62,22 @@ for filename in os.listdir(config_path):
                 connection_string = build_postgres_url(
                     user, password, host, port, db_name
                 )
-                connector = DatabaseConnector(connection_string)
-                connector.connect()
-                for table, table_config in v["tables"].items():
-                    table_data = connector.extract(
-                        table,
-                        table_config.get("columns"),
-                        table_config.get("where"),
-                        table_config.get("limit"),
-                    )
-                    filesaver.save_content(
-                        table_data, table_config["filename"]
-                    )
+                try:
+                    connector = DatabaseConnector(connection_string)
+                    connector.connect()
+                    for table, table_config in v["tables"].items():
+                        table_data = connector.extract(
+                            table,
+                            table_config.get("columns"),
+                            table_config.get("where"),
+                            table_config.get("limit"),
+                        )
+                        filesaver.save_content(
+                            table_data, table_config["filename"]
+                        )
+                except Exception as e:
+                    logging.error(f"Erro ao conectar ao banco de dados: {str(e)}")
+                    print("Conexão não foi estabelecida")
 
             if "mysql" in filename:
                 logging.info(f"Conectando ao banco de dados host={url}")
@@ -86,34 +89,45 @@ for filename in os.listdir(config_path):
                 connection_string = build_mysql_url(
                     user, password, port, host, db_name
                 )
-                connector = DatabaseConnector(connection_string)
-                connector.connect()
-                for table, table_config in v["tables"].items():
-                    table_data = connector.extract(
-                        table,
-                        table_config.get("columns"),
-                        table_config.get("where"),
-                        table_config.get("limit"),
-                    )
-                    filesaver.save_content(
-                        table_data, table_config["filename"]
-                    )
+                try:
+                    connector = DatabaseConnector(connection_string)
+                    connector.connect()
+                    for table, table_config in v["tables"].items():
+                        table_data = connector.extract(
+                            table,
+                            table_config.get("columns"),
+                            table_config.get("where"),
+                            table_config.get("limit"),
+                        )
+                        filesaver.save_content(
+                            table_data, table_config["filename"]
+                        )
+                except Exception as e:
+                    logging.error(f"Erro ao conectar ao banco de dados: {str(e)}")
+                    print("Conexão não foi estabelecida")
 
             if "sqlite" in filename:
                 logging.info(f"Conectando ao banco sqlite com path {url}")
                 connection_string = build_sqlite_url(url)
-                connector = DatabaseConnector(connection_string)
-                connector.connect()
-                for table, table_config in v["tables"].items():
-                    table_data = connector.extract(
-                        table,
-                        table_config.get("columns"),
-                        table_config.get("where"),
-                        table_config.get("limit"),
-                    )
-                    filesaver.save_content(
-                        table_data, table_config["filename"]
-                    )
+                try:
+                    connector = DatabaseConnector(connection_string)
+                    connector.connect()
+                    for table, table_config in v["tables"].items():
+                        table_data = connector.extract(
+                            table,
+                            table_config.get("columns"),
+                            table_config.get("where"),
+                            table_config.get("limit"),
+                        )
+                        filesaver.save_content(
+                            table_data, table_config["filename"]
+                        )
+                except Exception as e:
+                    logging.error(f"Erro ao conectar ao banco de dados: {str(e)}")
+                    print("Conexão não foi estabelecida")
+                
+
+print("Processo finalizado com sucesso!")
 
 # Feche o arquivo de log após o término do programa
 logging.shutdown()
