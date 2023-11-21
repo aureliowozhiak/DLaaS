@@ -76,7 +76,7 @@ for filename in os.listdir(config_path):
                             table_data, table_config["filename"]
                         )
                 except Exception as e:
-                    logging.error(f"Erro ao conectar ao banco de dados: {str(e)}")
+                    logging.error(f"Erro ao conectar no db: {str(e)}")
                     print("Conexão não foi estabelecida")
 
             if "mysql" in filename:
@@ -103,7 +103,7 @@ for filename in os.listdir(config_path):
                             table_data, table_config["filename"]
                         )
                 except Exception as e:
-                    logging.error(f"Erro ao conectar ao banco de dados: {str(e)}")
+                    logging.error(f"Erro ao conectar no db: {str(e)}")
                     print("Conexão não foi estabelecida")
 
             if "sqlite" in filename:
@@ -123,9 +123,8 @@ for filename in os.listdir(config_path):
                             table_data, table_config["filename"]
                         )
                 except Exception as e:
-                    logging.error(f"Erro ao conectar ao banco de dados: {str(e)}")
+                    logging.error(f"Erro ao conectar no db: {str(e)}")
                     print("Conexão não foi estabelecida")
-                
 
 print("Processo finalizado com sucesso!")
 
