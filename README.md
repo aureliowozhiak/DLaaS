@@ -1,87 +1,98 @@
-Read this in [Portuguese](translations/README.pt.md).
+# Projeto de Extração e Transformação de Dados
 
-<!-- About the Service -->
-# Data Lake as a Service
+Este projeto contém diversos módulos para extração, transformação e salvamento de dados. Abaixo está uma descrição de cada módulo e suas funcionalidades.
 
-Welcome to our Data Lake as a Service Open Source. Our software is specialized in managing and providing a fully managed Data Lake for your company, offering a robust and scalable solution for data storage and analysis.
+## Estrutura do Projeto
 
-With Data Lake as a Service, you don't need to worry about infrastructure, configuration, or environment maintenance. Our code will take care of everything, allowing you to focus on extracting valuable insights from your data.
+- `src/methods/loaders/fileSavers.py`
+- `src/methods/extractors/apiRequests.py`
+- `src/methods/extractors/databaseConnectors.py`
+- `src/methods/extractors/webPageDataScrappers.py`
+- `src/methods/transformers/dataCleaners.py`
 
-<!-- Benefits -->
-## Benefits of Data Lake as a Service Open Source
+## Módulos
 
-- Scalability: Expand your data storage capacity according to your business needs.
-- Security: Keep your data secure with advanced security measures and encryption.
-- Ease of Use: Intuitive and user-friendly interface for accessing and analyzing your data effortlessly.
-- Cost Reduction: Eliminate expenses related to infrastructure and labor for environment maintenance.
-- Advanced Data Analysis: Conduct detailed analyses and gain valuable insights for strategic decision-making.
+### FileSavers
 
-![Data Lake as a Service](https://dataengineer.help/DLaaS/DLaaS.png)
+Localização: `src/methods/loaders/fileSavers.py`
 
-## Project in Miro
+Este módulo contém a classe `FileSavers` que é responsável por salvar conteúdo em arquivos. Suporta salvamento em formato CSV e texto simples.
 
-https://miro.com/app/board/uXjVMr3ALEo=/?share_link_id=493109150457
+#### Métodos
 
-<!-- Project Setup -->
-## Project Setup
+- `save_content(content, file_name, columns=[], sep=",")`: Salva o conteúdo em um arquivo. Se o arquivo for CSV, escreve as colunas e o conteúdo separado por vírgulas.
 
-Follow the steps below to set up and run the Data Lake as a Service project in your environment using Poetry.
+### ApiRequests
 
-## Install Poetry
+Localização: `src/methods/extractors/apiRequests.py`
 
-If you don't already have Poetry installed, you can do so using the pip package manager. Open your terminal and run the following command:
+Este módulo contém a classe `ApiRequests` que facilita a realização de requisições HTTP para APIs.
 
-```bash
-pip install poetry
-```
+#### Métodos
 
-### Install the Dependencies
+- `make_request(endpoint, method="GET", params=None, data=None)`: Faz uma requisição HTTP para o endpoint especificado.
+- `make_full_request(endpoint, method="GET", params=None, data=None, pagination=None)`: Faz requisições paginadas e retorna todas as respostas.
 
-To install the project dependencies, execute the following command in the project's root directory:
+### DatabaseConnector
 
-```bash
-poetry install
-```
+Localização: `src/methods/extractors/databaseConnectors.py`
 
-This will ensure that all the necessary dependencies are installed in the project's virtual environment.
+Este módulo contém a classe `DatabaseConnector` que gerencia a conexão com um banco de dados e a execução de consultas.
 
-### Run the Project
-To start the project, execute the following command:
+#### Métodos
 
-```bash
-poetry run python -m main
-```
+- `connect()`: Conecta ao banco de dados.
+- `disconnect()`: Desconecta do banco de dados.
+- `sanitize_query(query)`: Sanitiza uma consulta SQL para evitar injeções de SQL.
+- `build_query_string(table, columns=None, where=None, limit=None)`: Constrói uma string de consulta SQL.
+- `extract(table, columns=None, where=None, limit=None, return_type="json")`: Extrai dados do banco de dados e retorna no formato especificado.
+- `query_data(table, columns=None, where=None, limit=None)`: Executa uma consulta SQL e retorna os dados.
 
-Remember to configure the environment variables and any other necessary settings before running the project. Also, be sure to consult the documentation for additional information on how to use the Data Lake as a Service Open Source.
+### WebPageDataScrappers
 
-Enjoy using Data Lake as a Service and start exploring the benefits it provides for data storage and analysis in your company!
+Localização: `src/methods/extractors/webPageDataScrappers.py`
 
-## Logging System in the Project
+Este módulo contém a classe `WebPageDataScrappers` que facilita a extração de dados de páginas web.
 
+#### Métodos
 
-The Data Lake as a Service project incorporates a logging system using Python's `logging` library. This logging system has been implemented to assist in tracking code execution and identifying potential issues during processing.
+- `get_tag_content(tag_name)`: Retorna o conteúdo de todas as tags especificadas.
+- `get_html()`: Retorna o HTML completo da página.
+- `handle_content(tag_name, attrs)`: Extrai atributos específicos de tags.
+- `count_words()`: Conta o número de palavras na página.
+- `get_images()`: Retorna os URLs de todas as imagens na página.
+- `count_tags(tag_name)`: Conta o número de tags específicas na página.
+- `get_meta_tags()`: Retorna os meta tags da página.
+- `search_text(search_text)`: Procura por um texto específico na página.
+- `get_page_links(url)`: Retorna todos os links da página.
 
-### Basic Operation
+### DataCleaner
 
-The logging systems works as the following:
+Localização: `src/methods/transformers/dataCleaners.py`
 
-1. **Logging Setup**: At the beginning of the code, we configure the logging system to direct messages to a file named "init.log" in the "logs" directory. Log messages are recorded with different levels, with the primary level being `INFO`, which is used for informative messages.
+Este módulo contém a classe `DataCleaner` que realiza a limpeza de dados em um DataFrame.
 
+#### Métodos
 
-2. **Message Logging**: Throughout the code, we use the `logging.info()` function to log informative messages at relevant points during execution. For example, we log information about processed URLs, API requests, and database operations.
+- `remove_duplicates()`: Remove duplicatas do DataFrame.
+- `handle_missing_values(method="drop", columns=None)`: Lida com valores nulos no DataFrame usando o método especificado.
+- `clean_data()`: Remove duplicatas e lida com valores nulos.
+- `get_cleaned_dataframe()`: Retorna o DataFrame limpo.
 
-3. **Benefits**: The logging system provides several benefits, including:
-    - Progress Tracking: Log messages help track what's happening during code execution.
-    - Debugging: It facilitates the identification of issues and errors, enabling more effective debugging.
-    - Auditing: Log messages can be used for auditing and post-execution analysis.
+## Requisitos
 
-4. **Location of Records**: All log messages are recorded in the "init.log" file in the "logs" directory. Make sure to create the "logs" folder in the same directory where the script is located or adjust the log file path as needed.
+Os requisitos do projeto serão especificados em um arquivo `requirements.txt` que deve ser gerado posteriormente.
 
+## Como Usar
 
-### Recommended Usage
+1. Clone o repositório.
+2. Instale os requisitos.
+3. Importe e utilize as classes conforme necessário em seu projeto.
 
-When running the Data Lake as a Service project, it is advisable to refer to the "init.log" log file for information about the progress of execution. If any issues arise, the log messages will provide valuable clues for troubleshooting.
+## Contribuição
 
-Remember to configure environment variables and any other necessary settings before running the project. Additionally, consult the documentation for further information on using Data Lake as a Service.
+Sinta-se à vontade para abrir issues e pull requests para melhorias e correções.
 
-Utilizing the logging system helps maintain transparency and visibility during project execution, contributing to a smoother and more reliable experience.
+## Licença
+
+Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.

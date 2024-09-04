@@ -1,6 +1,7 @@
 class DataCleaner:
-    def __init__(self, dataframe):
+    def __init__(self, dataframe, dataframe_type="pandas"):
         self.dataframe = dataframe
+        self.dataframe_type = dataframe_type
 
     def remove_duplicates(self):
         self.dataframe = self.dataframe.drop_duplicates()
